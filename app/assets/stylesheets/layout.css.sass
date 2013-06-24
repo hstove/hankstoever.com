@@ -1,0 +1,65 @@
+html
+  :height 100%
+  :margin 0px
+  :padding 0px
+
+body
+  :color #333
+  :font-family Helvetica Neue
+  :margin 0px
+  :padding 0px
+  :height 100%
+  :position relative
+  :top -21px
+  :font-weight 300
+  :letter-spacing 1px
+  :height 100%
+  
+a, a:visited
+  :color rgb(114, 114, 114)
+  &.plain
+    :color #333
+    :text-decoration none
+    &:hover
+      :text-decoration underline
+#sidebar
+  :z-index 10
+  :float left
+  :width 300px
+  :text-align right
+  p
+    :margin 5px 0
+  .avatar
+    :width 300px
+  .desc
+    :padding 10px
+    h1
+      :margin 5px
+.description
+  :color #aaa
+  :font-weight 300
+  :font-size 13px
+
+
+#main
+  :padding 0 25px
+  :margin-top 20px
+  :float left
+  :min-height 100%
+  :border-left 1px solid rgba(126, 89, 180, 0.5)
+  :max-width 600px
+  :background #FDFDFD
+
+.project
+  :margin-left 20px
+
+i[class*="icon-"]
+  :opacity 0.7
+  :margin 0 10px
+
+@mixin retro($spacing)
+  :text-shadow $spacing $spacing 0 rgba(170,255,0,0.9), -#{$spacing} -#{$spacing} rgba(0,170,255,0.5)
+  :color rgba(170,0,255, 0.8)
+
+.retro
+  +retro(3px)
