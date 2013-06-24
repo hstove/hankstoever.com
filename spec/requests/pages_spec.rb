@@ -1,10 +1,10 @@
 # require 'spec_helper'
 
-# describe "Posts" do
-#   describe "GET /posts" do
-#     it "works! (now write some real specs)" do
+# describe "Pages" do
+#   describe "GET /projects" do
+#     it "works!" do
 #       # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-#       get posts_path
+#       get page_path(template: :projects)
 #       response.status.should be(200)
 #     end
 #   end
