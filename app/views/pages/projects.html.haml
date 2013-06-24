@@ -1,30 +1,31 @@
-%h3 Personal Projects
-= project "Afterparty", "https://github.com/hstove/afterparty", "A modest Rails 4 compatible queue with support for executing jobs in the future and serialization with ActiveRecord."
-- descript = "A #{dynamo_tag :span, %w{light simple basic}, center: true, delay: 1300, speed: 100}"
-- descript += " library for using #{link_to "dynamo.js", "http://jordanscales.com/dynamo/", target: '_blank'} with Ruby on Rails."
-= project "dynamojs_rails", "https://github.com/hstove/dynamojs_rails", descript
-= project "Guard-Play", "https://github.com/hstove/guard-play", "A #{link_to("guard","https://github.com/guard/guard", target: '_blank')} plugin for watching and automatically running #{link_to "Play Framework", "http://www.playframework.com/", target: '_blank'} tests."
-= project "Game of Life", "https://github.com/hstove/game-of-life", "An implementation of the classic #{link_to "Game of Life", "http://en.wikipedia.org/wiki/Conway's_Game_of_Life", target: "_blank"}. #{link_to "", "http://gol.hankstoever.com", class: 'icon-external-link', target: "_blank"}"
+= cache "projects_page" do
+  %h3 Personal Projects
+  = project "Afterparty", "https://github.com/hstove/afterparty", "A modest Rails 4 compatible queue with support for executing jobs in the future and serialization with ActiveRecord."
+  - descript = "A #{dynamo_tag :span, %w{light simple basic}, center: true, delay: 1300, speed: 100}"
+  - descript += " library for using #{link_to "dynamo.js", "http://jordanscales.com/dynamo/", target: '_blank'} with Ruby on Rails."
+  = project "dynamojs_rails", "https://github.com/hstove/dynamojs_rails", descript
+  = project "Guard-Play", "https://github.com/hstove/guard-play", "A #{link_to("guard","https://github.com/guard/guard", target: '_blank')} plugin for watching and automatically running #{link_to "Play Framework", "http://www.playframework.com/", target: '_blank'} tests."
+  = project "Game of Life", "https://github.com/hstove/game-of-life", "An implementation of the classic #{link_to "Game of Life", "http://en.wikipedia.org/wiki/Conway's_Game_of_Life", target: "_blank"}. #{link_to "", "http://gol.hankstoever.com", class: 'icon-external-link', target: "_blank"}"
 
-/%h3 Websites
-/= project "uludum.org"
-/= project "hankstoever.com"
-/= project "RhinosaurusBand.com"
-/= project "hnbuffer.com"
+  /%h3 Websites
+  /= project "uludum.org"
+  /= project "hankstoever.com"
+  /= project "RhinosaurusBand.com"
+  /= project "hnbuffer.com"
 
-%h3
-  = link_to "Dailycred", "https://www.dailycred.com"
-  Integration Libraries
-= project "Ruby on Rails Engine", "https://github.com/dailycred/dailycred"
-= project "Objective-C Library", "https://github.com/dailycred/objective-dc"
-= project "Node.js Module", "https://github.com/dailycred/passport-dailycred"
-= project "jQuery Plugin", "https://github.com/dailycred/jquery.dailycred"
-= project "Client-Side Javascript Library", "https://github.com/dailycred/dailycred.js"
-= project "Launchy", "https://github.com/dailycred/launchy", "An open-source rails template for instantly creating a landing page with a robust user account system."
+  %h3
+    = link_to "Dailycred", "https://www.dailycred.com"
+    Integration Libraries
+  = project "Ruby on Rails Engine", "https://github.com/dailycred/dailycred"
+  = project "Objective-C Library", "https://github.com/dailycred/objective-dc"
+  = project "Node.js Module", "https://github.com/dailycred/passport-dailycred"
+  = project "jQuery Plugin", "https://github.com/dailycred/jquery.dailycred"
+  = project "Client-Side Javascript Library", "https://github.com/dailycred/dailycred.js"
+  = project "Launchy", "https://github.com/dailycred/launchy", "An open-source rails template for instantly creating a landing page with a robust user account system."
 
-%h3 Open Source Contributions
-= project "hurl.it", "https://github.com/twilio/hurl/pull/11"
-= project "gga4r", "https://github.com/spejman/gga4r/pull/3"
-= project "nifty-generators", "https://github.com/ryanb/nifty-generators/pull/158"
-= project "omniauth", "https://github.com/intridea/omniauth/pull/678"
-= project "statsample", "https://github.com/clbustos/statsample/pull/6/files"
+  %h3 Open Source Contributions
+  = project "hurl.it", "https://github.com/twilio/hurl/pull/11"
+  = project "gga4r", "https://github.com/spejman/gga4r/pull/3"
+  = project "nifty-generators", "https://github.com/ryanb/nifty-generators/pull/158"
+  = project "omniauth", "https://github.com/intridea/omniauth/pull/678"
+  = project "statsample", "https://github.com/clbustos/statsample/pull/6/files"
