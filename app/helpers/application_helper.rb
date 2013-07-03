@@ -9,7 +9,7 @@ module ApplicationHelper
   def project name, url, description=nil
     html = content_tag :p, class: "project" do
       repo = Octokit::Repository.from_url(url)
-      inner = link_to name, repo.url, target: '_blank'
+      inner = link_to name, url, target: '_blank'
       unless description.nil?
         inner << content_tag(:span, (" - " + description).html_safe)
       end

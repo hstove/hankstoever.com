@@ -2,7 +2,7 @@
 %html
 
   %head
-    %title Personal Website for Hank Stoever
+    %title Hank Stoever
     = stylesheet_link_tag    "application", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
@@ -16,9 +16,6 @@
           %p.description
             = succeed(link_to ".", "https://vimeo.com/40434608", target: '_blank', style: "text-decoration: none;") do
               part time nerd, part time gnar shredder
-          %p.description
-            lead platform engineer for
-            = link_to "dailycred", "https://www.dailycred.com"
           %br
           %p.description
             Seattle -
