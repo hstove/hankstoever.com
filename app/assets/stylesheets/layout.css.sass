@@ -68,6 +68,11 @@ i[class*="icon-"]
 @mixin retro($spacing)
   :text-shadow $spacing $spacing 0 rgba(170,255,0,0.9), -#{$spacing} -#{$spacing} rgba(0,170,255,0.5)
   :color rgba(170,0,255, 0.8)
+  a
+    :color rgba(170,0,255, 0.8)
+    :text-decoration none
+    &:hover, &:active
+      :text-decoration underline
 
 .retro
   +retro(3px)

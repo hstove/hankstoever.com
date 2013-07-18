@@ -13,7 +13,7 @@
       = cache "sidebar" do
         = image_tag "https://secure.gravatar.com/avatar/73719c8eb97a63acd87f2f0a918a5005?s=300", class: "avatar", width: 300, height: 300
         .desc
-          %h1.retro Hank Stoever
+          %h1.retro= link_to "Hank Stoever", root_url
           %p.description
             = succeed(link_to ".", "https://vimeo.com/40434608", target: '_blank', style: "text-decoration: none;") do
               part time nerd, part time gnar shredder
