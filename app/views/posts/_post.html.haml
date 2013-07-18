@@ -1,4 +1,4 @@
-= cache post, params['action'] do
+= cache [post, params['action']] do
   %h2.title= link_to post.title.titleize, post, class: 'plain'
   %p.description= "posted #{time_ago_in_words(post.created_at)} ago"
   - is_index = params['action'] == "index"
