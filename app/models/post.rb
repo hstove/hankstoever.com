@@ -7,6 +7,11 @@ class Post < ActiveRecord::Base
     "#{id}-#{slug}"
   end
 
+  def preview
+    index = body.index("\n")
+    index.nil? ? body : body[0...index]
+  end
+
   def slug(param=self.title)
 
     # strip the string

@@ -1,4 +1,10 @@
 = cache post do
   %h2.title= link_to post.title.titleize, post, class: 'plain'
   %p.description= "posted #{time_ago_in_words(post.created_at)} ago"
-  %p.post= markdown(post.body)
+  - is_index = params['action'] == "index"
+  - text = is_index ? post.preview : post.body
+  %p.post
+    = markdown(text)
+    - if is_index
+      = "..."
+      / %p= link_to "Read More", post, class: 'small'
