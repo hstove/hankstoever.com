@@ -22,6 +22,11 @@ gem 'bluecloth'
 gem 'font-awesome-sass-rails'
 gem 'memcachier'
 gem 'octokit'
+gem 'redcarpet'
+gem 'albino'
+gem 'nokogiri'
+gem 'bootstrap-sass'
+gem 'mobylette', github: 'hstove/mobylette'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
