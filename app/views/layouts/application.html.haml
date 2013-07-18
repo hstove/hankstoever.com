@@ -3,6 +3,7 @@
 
   %head
     %title Hank Stoever
+    = analytics_init if Rails.env.production?
     = stylesheet_link_tag    "application", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
@@ -27,4 +28,3 @@
           %p.link= link_to "Blog", posts_path
     #main
       = yield
-    / # = analytics_init if Rails.env.production?
