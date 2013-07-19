@@ -32,7 +32,7 @@ module ApplicationHelper
 
   def hn_ad
     unless Rails.env.development? && params['hn']
-      return "" unless request.referer.include?("ycombinator")
+      return "" unless !request.referer.blank? && request.referer.include?("ycombinator")
     end
     message = "You might like #{link_to "hnbuffer", "http://hnbuffer.com"}, a service for posting to hacker news at the perfect time.".html_safe
     content_tag(:p, message, class: 'highlight')
