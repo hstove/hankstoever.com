@@ -1,0 +1,8 @@
+.center
+  %h3
+    If arbitrage levels are over
+    = succeed "%," do
+      #{dynamo_tag :span, rand_nums(1,9), delay: 1300, speed: 200}
+    trade
+    #{dynamo_tag :span, rand_nums(0.01,5), delay: 2000, speed: 300}
+    bitcoins.

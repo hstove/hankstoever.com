@@ -22,6 +22,22 @@ module ApplicationHelper
     markdown.render(text).html_safe
   end
 
+  def rand_nums min, max, count=10
+    nums = []
+    count.times do
+      nums << rand(min..max).round(2)
+    end
+    nums
+  end
+
+  def hn_ad
+    unless Rails.env.development? && params['hn']
+      return "" unless request.referer.include?("ycombinator")
+    end
+    message = "You might like #{link_to "hnbuffer"}, a service for posting to hacker news at the perfect time.".html_safe
+    content_tag(:p, message, class: 'highlight')
+  end
+
   def to_slug(param=self.slug)
 
     # strip the string
