@@ -1,4 +1,6 @@
 Heynk::Application.routes.draw do
+  resources :customers, only: [:create]
+
   resources :posts
   get "/:template" => "pages#show", as: "page"
 

@@ -37,31 +37,4 @@ module ApplicationHelper
     message = "You might like #{link_to "hnbuffer", "http://hnbuffer.com"}, a service for posting to hacker news at the perfect time.".html_safe
     content_tag(:p, message, class: 'highlight')
   end
-
-  def to_slug(param=self.slug)
-
-    # strip the string
-    ret = param.strip
-
-    #blow away apostrophes
-    ret.gsub! /['`]/, ""
-
-    # @ --> at, and & --> and
-    ret.gsub! /\s*@\s*/, " at "
-    ret.gsub! /\s*&\s*/, " and "
-
-    # replace all non alphanumeric, periods with dash
-    ret.gsub! /\s*[^A-Za-z0-9\.]\s*/, '-'
-
-    # replace underscore with dash
-    ret.gsub! /[-_]{2,}/, '-'
-
-    # convert double dashes to single
-    ret.gsub! /-+/, "-"
-
-    # strip off leading/trailing dash
-    ret.gsub! /\A[-\.]+|[-\.]+\z/, ""
-
-    ret
-  end
 end
