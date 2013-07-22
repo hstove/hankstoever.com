@@ -1,4 +1,6 @@
 class Post < ActiveRecord::Base
+  scope :for_digest, -> { where("created_at > ?", 1.month.ago) }
+  default_scope -> { order("created_at desc") }
   def html
     Bluecloth.new(body).to_html.html_safe
   end
@@ -9,7 +11,8 @@ class Post < ActiveRecord::Base
 
   def preview
     index = body.index("\n")
-    index.nil? ? body : body[0...index]
+    string = index.nil? ? body : body[0...index]
+    string += "..."
   end
 
   def slug(param=self.title)

@@ -80,4 +80,24 @@ Heynk::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   GA.tracker = "UA-42563754-1"
+
+  config.action_mailer.default_url_options = {
+    :host => "uludum.org"
+  }
+
+  ActionMailer::Base.smtp_settings = {
+    :address        => 'smtp.sendgrid.net',
+    :port           => '587',
+    :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => 'heroku.com',
+    :enable_starttls_auto => true
+  }
+
+  config.middleware.use ExceptionNotification::Rack,
+    :ignore_crawlers => %w{Googlebot bingbot googlebot YandexBot},
+    :email => {
+      :exception_recipients => %w{hstove@gmail.com},
+    }
 end

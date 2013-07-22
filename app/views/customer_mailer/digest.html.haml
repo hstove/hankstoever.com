@@ -1,0 +1,17 @@
+%p== Hey #{@email},
+
+%p
+  You're receiving this email because you signed up to receive monthly emails of the best content from my blog,
+  = succeed "." do
+    = link_to "hankstoever.com", root_url
+
+- @posts.each do |post|
+  %p
+    %strong
+      = link_to post.title.titleize, post_url(post)
+      = " - "
+    %p= markdown(post.preview)
+
+%p Thanks for reading!
+
+%p Hank Stoever

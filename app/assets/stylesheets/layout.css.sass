@@ -1,3 +1,5 @@
+$green: rgb(63, 202, 52)
+$purple: #6d34ca
 html
   :height 100%
   :margin 0px
@@ -25,6 +27,8 @@ a, a:visited
     :text-decoration none
     &:hover
       :text-decoration underline
+
+
 #sidebar
   :z-index 10
   :float left
@@ -53,6 +57,8 @@ a, a:visited
   :border-left 1px solid rgba(126, 89, 180, 0.5)
   :max-width 600px
   :width 100%
+  img
+    :max-width 100%
 
 .project
   :margin-left 20px
@@ -66,10 +72,11 @@ i[class*="icon-"]
   :margin 0 10px
 
 @mixin retro($spacing)
-  :text-shadow $spacing $spacing 0 rgba(170,255,0,0.9), -#{$spacing} -#{$spacing} rgba(0,170,255,0.5)
-  :color rgba(170,0,255, 0.8)
+  $opacity: 0.7
+  :text-shadow $spacing -#{$spacing} 0 rgba(#ecd07a, $opacity), -#{$spacing} -#{$spacing} rgba(#34b0ca, $opacity), -#{$spacing} $spacing 0 rgba(#ff628b, $opacity), $spacing $spacing 0 rgba(#3fca34, $opacity)//, 0 0 25px black
+  :color rgba(#6d34ca, 0.8)
   a
-    :color rgba(170,0,255, 0.8)
+    :color rgba(#6d34ca, 0.8)
     :text-decoration none
     &:hover, &:active
       :text-decoration underline
@@ -98,3 +105,35 @@ code
 .highlight
   :background-color #FDE7FF
   :padding 6px
+
+.book-cover
+  $color: $green
+  $width: 300px
+  $height: 400px
+  :width $width
+  :height $height
+  :background-image url('/images/tweed.png')
+  :background-repeat repeat
+  :margin 20px auto
+  :border 3px solid rgba($color, 0.4)
+  :border-radius 3px
+  :box-shadow 0 0 15px black
+  :text-align center
+  .fade
+    $padding: 20px
+    :background-color rgba($color, 0.3)
+    :padding $padding
+    :width $width - $padding * 2
+    :height $height - $padding * 2
+    :border-radius 3px
+  p
+    //+retro(2px)
+    :color lighten($purple, 20%)
+    :font-size 16px
+    $shadow: rgba(darken($color, 30%), 0.6)
+    :text-shadow 1px 1px 0 $shadow, 0 -1px 0 $shadow
+    &.book-title
+      :font-size 22px
+
+.center
+  :text-align center
