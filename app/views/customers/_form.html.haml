@@ -1,7 +1,11 @@
 - 3.times do
   %br
-%p.small Join my newsletter to recieve a digest of my best content every month about software, startups, and life.
+- if session[:email].blank?
+  %p.small Join my newsletter to recieve a digest of my best content every month about software, startups, and life.
 
-= form_for Customer.new do |f|
-  = f.email_field :email, placeholder: "Email Address"
-  = f.submit "Join"
+  = form_for Customer.new do |f|
+    = f.email_field :email, placeholder: "Email Address"
+    = f.submit "Join"
+
+- else
+  %p.description== hi #{session[:email]}
