@@ -109,17 +109,25 @@ code
   :padding 6px
 
 .book-cover
-  $color: $green
+  $color: $purple
   $width: 300px
   $height: 400px
   :width $width
   :height $height
   :background-image url('/images/tweed.png')
+  // self hosted version
+  //:background-image url('http://subtlepatterns.com/patterns/tweed.png')
   :background-repeat repeat
   :margin 20px auto
-  :border 2px solid rgba($color, 0.4)
+  :border 1px solid darken($color, 30%)
   :border-radius 0px 3px 3px 0
-  :box-shadow 1px -1px 0 darken(whiteSmoke, 10%), 2px -2px 0 darken(whiteSmoke, 15%), 3px -3px 0 darken(whiteSmoke, 20%), 3px -3px 0 darken(whiteSmoke, 25%), 4px -4px 0 darken($green, 20%), 0 0 15px black
+  $pages: 1px -1px 0 darken(whiteSmoke, 10%)
+  @for $i from 2 through 4
+    $pages: $pages, #{$i}px -#{$i}px 0 darken(whiteSmoke, ($i * 10))
+  $bounder: 5px -5px 0 darken($color, 35%)
+  @for $i from 0 through 4
+    $bounder: $bounder, #{$i}px #{-1 - $i}px 0px darken($color, 35%)
+  :box-shadow $pages, $bounder, 0 0 45px rgba(black, 0.8)
   :text-align center
   :text-transform uppercase
   :font-family 'Lato', Helvetica Neue
@@ -133,10 +141,10 @@ code
     :border-radius 0 3px 3px 0
     :position relative
     :left $binding
-    :box-shadow -#{$binding} 0 0 rgba(darken($green, 20%), 0.3)
+    :box-shadow -#{$binding} 0 0 rgba(darken($color, 20%), 0.3)
   p
     //+retro(2px)
-    :color lighten($purple, 40%)
+    :color lighten($green, 40%)
     :font-size 16px
     $shadow: rgba(darken($color, 30%), 0.6)
     :text-shadow 1px 1px 1px $shadow, 0 -1px 0 $shadow
