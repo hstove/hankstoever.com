@@ -5,6 +5,3 @@
   - text = is_index ? post.preview : post.body
   .post
     = markdown(text)
-    - if is_index
-      = "..."
-      / %p= link_to "Read More", post, class: 'small'
