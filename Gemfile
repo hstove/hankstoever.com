@@ -27,6 +27,7 @@ gem 'albino'
 gem 'nokogiri'
 gem 'bootstrap-sass'
 gem 'mobylette', github: 'hstove/mobylette'
+# gem 'github-markup', require: 'github/markup'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
