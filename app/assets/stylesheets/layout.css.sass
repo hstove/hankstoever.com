@@ -133,7 +133,7 @@ code
   :font-family 'Lato', Helvetica Neue
   .fade
     $padding: 40px
-    $binding: 5px
+    $binding: 3px
     :background-color rgba($color, 0.3)
     :padding 20px $padding
     :width $width - $padding * 2 - $binding
@@ -141,7 +141,7 @@ code
     :border-radius 0 3px 3px 0
     :position relative
     :left $binding
-    :box-shadow -#{$binding} 0 0 rgba(darken($color, 20%), 0.3)
+    :box-shadow -#{$binding} 0 0 rgba(darken($color, 40%), 0.3)
   p
     //+retro(2px)
     :color lighten($green, 40%)
