@@ -16,6 +16,8 @@ body
   :font-weight 300
   :letter-spacing 1px
   :height 100%
+  :font-size 14px 
+  :line-height 1.35em
 
 h4
   :margin 10px 0
@@ -115,7 +117,7 @@ code
   :background-image url('/images/tweed.png')
   :background-repeat repeat
   :margin 20px auto
-  :border 3px solid rgba($color, 0.4)
+  :border 2px solid rgba($color, 0.4)
   :border-radius 3px
   :box-shadow 0 0 15px black
   :text-align center
@@ -128,12 +130,42 @@ code
     :border-radius 3px
   p
     //+retro(2px)
-    :color lighten($purple, 20%)
+    :color lighten($purple, 40%)
     :font-size 16px
     $shadow: rgba(darken($color, 30%), 0.6)
-    :text-shadow 1px 1px 0 $shadow, 0 -1px 0 $shadow
+    :text-shadow 1px 1px 1px $shadow, 0 -1px 0 $shadow
     &.book-title
       :font-size 22px
+      :line-height 1.25em
 
 .center
   :text-align center
+
+#toc
+  :text-align center
+  :list-style none
+  :padding 10px
+  :border 1px solid #ccc
+  :max-width 300px
+  :margin 0px auto
+  :border-radius 3px
+  :box-shadow 0 0 13px #ccc
+
+.book-form
+  :text-align center
+  :border 1px solid #ccc
+  :max-width 400px
+  :margin 0px auto
+  :padding 20px 10px 10px
+  input[type="email"]
+    :font-size 16px
+    :width 200px
+    :padding 2px 6px
+  input[type="submit"]
+    :background #ccc
+    :border 1px solid #ccc
+    :font-size 16px
+    :padding 3px 6px
+
+.notice
+  :color green

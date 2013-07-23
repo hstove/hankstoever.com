@@ -10,24 +10,29 @@
     = favicon_link_tag
   %body
     #sidebar
-      = cache "sidebar" do
-        = image_tag "https://secure.gravatar.com/avatar/73719c8eb97a63acd87f2f0a918a5005?s=300", class: "avatar", width: 300, height: 300
-        .desc
-          %h1.retro= link_to "Hank Stoever", root_url
-          %p.description
-            = succeed(link_to ".", "https://vimeo.com/40434608", target: '_blank', style: "text-decoration: none;") do
-              part time nerd, part time gnar shredder
-          %br
-          %p.description
-            Seattle -
-            = link_to "", "mailto:hstove@gmail.com", class: 'icon-envelope'
-            = link_to "", "https://github.com/hstove", class: 'icon-github', target: '_blank'
-            = link_to "", "http://www.linkedin.com/in/hankstoever", class: 'icon-linkedin', target: '_blank'
-            = link_to "", "https://twitter.com/heynky", class: 'icon-twitter', target: '_blank'
-          %br
-          = link :projects
-          %p.link= link_to "Blog", posts_path
-          = render partial: "customers/form"
+      =# cache "sidebar" do
+      = image_tag "https://secure.gravatar.com/avatar/73719c8eb97a63acd87f2f0a918a5005?s=300", class: "avatar", width: 300, height: 300
+      .desc
+        %h1.retro= link_to "Hank Stoever", root_url
+        %p.description
+          = succeed(link_to ".", "https://vimeo.com/40434608", target: '_blank', style: "text-decoration: none;") do
+            part time nerd, part time gnar shredder
+        %p.description 
+          software engineer at
+          = link_to "up global", "http://up.co"
+        %br
+        %p.description
+          Seattle -
+          = link_to "", "mailto:hstove@gmail.com", class: 'icon-envelope'
+          = link_to "", "https://github.com/hstove", class: 'icon-github', target: '_blank'
+          = link_to "", "http://www.linkedin.com/in/hankstoever", class: 'icon-linkedin', target: '_blank'
+          = link_to "", "https://twitter.com/heynky", class: 'icon-twitter', target: '_blank'
+        %br
+        = link :projects
+        %p.link= link_to "Blog", posts_path
+        = render partial: "customers/form"
     #main
       = hn_ad
+      - if notice
+        %p.notice= notice
       = yield
