@@ -120,13 +120,16 @@ code
   :background-repeat repeat
   :margin 20px auto
   :border 1px solid darken($color, 30%)
-  :border-radius 0px 3px 3px 0
+  :border-radius 0px 1px 1px 0
+  //:border-radius 0
   $pages: 1px -1px 0 darken(whiteSmoke, 10%)
-  @for $i from 2 through 4
-    $pages: $pages, #{$i}px -#{$i}px 0 darken(whiteSmoke, ($i * 10))
-  $bounder: 5px -5px 0 darken($color, 35%)
-  @for $i from 0 through 4
-    $bounder: $bounder, #{$i}px #{-1 - $i}px 0px darken($color, 35%)
+  $pageLength: 5
+  $pageGap: 2
+  @for $i from 2 through $pageLength
+    $pages: $pages, #{$i * $pageGap}px -#{$i * $pageGap}px 0 darken(whiteSmoke, ($i * (35 / $pageLength)))
+  $bounder: #{$pageLength * $pageGap + 1}px -#{$pageLength * $pageGap + 1}px 0 darken($color, 35%)
+  @for $i from 0 through $pageLength
+    $bounder: $bounder, #{$i * $pageGap}px #{-1 - $i * $pageGap}px 0px darken($color, 35%)
   :box-shadow $pages, $bounder, 0 0 45px rgba(black, 0.8)
   :text-align center
   :text-transform uppercase
@@ -141,7 +144,7 @@ code
     :border-radius 0 3px 3px 0
     :position relative
     :left $binding
-    :box-shadow -#{$binding} 0 0 rgba(darken($color, 40%), 0.3)
+    :box-shadow -#{$binding} 0 0 rgba(darken($color, 40%), 0.3), -#{$binding / 2} 0 0 rgba(darken($color, 20%), 0.7)
   p
     //+retro(2px)
     :color lighten($green, 40%)
