@@ -118,16 +118,22 @@ code
   :background-repeat repeat
   :margin 20px auto
   :border 2px solid rgba($color, 0.4)
-  :border-radius 3px
-  :box-shadow 0 0 15px black
+  :border-radius 0px 3px 3px 0
+  :box-shadow 1px -1px 0 darken(whiteSmoke, 10%), 2px -2px 0 darken(whiteSmoke, 15%), 3px -3px 0 darken(whiteSmoke, 20%), 3px -3px 0 darken(whiteSmoke, 25%), 4px -4px 0 darken($green, 20%), 0 0 15px black
   :text-align center
+  :text-transform uppercase
+  :font-family 'Lato', Helvetica Neue
   .fade
-    $padding: 20px
+    $padding: 40px
+    $binding: 5px
     :background-color rgba($color, 0.3)
-    :padding $padding
-    :width $width - $padding * 2
-    :height $height - $padding * 2
-    :border-radius 3px
+    :padding 20px $padding
+    :width $width - $padding * 2 - $binding
+    :height $height - 20px * 2
+    :border-radius 0 3px 3px 0
+    :position relative
+    :left $binding
+    :box-shadow -#{$binding} 0 0 rgba(darken($green, 20%), 0.3)
   p
     //+retro(2px)
     :color lighten($purple, 40%)
@@ -135,16 +141,14 @@ code
     $shadow: rgba(darken($color, 30%), 0.6)
     :text-shadow 1px 1px 1px $shadow, 0 -1px 0 $shadow
     &.book-title
-      :font-size 22px
+      :font-size 18px
       :line-height 1.25em
 
 .center
   :text-align center
 
 #toc
-  :text-align center
-  :list-style none
-  :padding 10px
+  :padding 10px 40px 20px
   :border 1px solid #ccc
   :max-width 300px
   :margin 0px auto
