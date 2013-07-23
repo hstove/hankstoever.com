@@ -1,6 +1,10 @@
 = form_for Customer.new, html: { class: 'book-form' } do |f|
   = f.email_field :email, placeholder: "Email Address"
   = f.submit "Submit"
-  = hidden_field_tag :ref, "book"
   
   %p Get updates about the book and 20% off on launch day.
+
+  = f.hidden_field :handbook, value: true
+  = f.check_box :subscribed
+  = hidden_field_tag :ref, "book"
+  %span.description Receive a monthly digest of the best content from my blog.

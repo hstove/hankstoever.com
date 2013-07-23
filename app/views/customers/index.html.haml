@@ -1,0 +1,12 @@
+%table#customers.table.table-bordered
+  %thead
+    %tr
+      %th Email
+      %th Subscribed?
+      %th Handbook?
+  %tbody
+    - @customers.each do |customer|
+      %tr
+        %td= link_to customer.email, "mailto:#{customer.email}"
+        %td{class: "#{'icon-check' if customer.subscribed?}"}
+        %td{class: "#{'icon-check' if customer.handbook}"}

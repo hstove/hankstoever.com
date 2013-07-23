@@ -4,4 +4,5 @@
 
 = form_for Customer.new do |f|
   = f.email_field :email, placeholder: "Email Address"
+  = f.hidden_field :subscribed, value: true
   = f.submit "Join"
