@@ -95,9 +95,9 @@ Heynk::Application.configure do
     :enable_starttls_auto => true
   }
 
-  config.middleware.use ExceptionNotification::Rack,
-    :ignore_crawlers => %w{Googlebot bingbot googlebot YandexBot},
-    :email => {
-      :exception_recipients => %w{hstove@gmail.com},
-    }
+  # config.middleware.use ExceptionNotification::Rack,
+  #   :ignore_crawlers => %w{Googlebot bingbot googlebot YandexBot},
+  #   :email => {
+  #     :exception_recipients => %w{hstove@gmail.com},
+  #   }
 end
