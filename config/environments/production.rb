@@ -82,7 +82,7 @@ Heynk::Application.configure do
   GA.tracker = "UA-42563754-1"
 
   config.action_mailer.default_url_options = {
-    :host => "uludum.org"
+    :host => "hankstoever.com"
   }
 
   ActionMailer::Base.smtp_settings = {
