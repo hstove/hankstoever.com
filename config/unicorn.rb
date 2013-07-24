@@ -13,7 +13,7 @@ before_fork do |server, worker|
   end
  
   # If you are using Redis but not Resque, change this
-  if defined?(Afterparty) && !Split.redis.nil?
+  if defined?(Split) && !Split.redis.nil?
     Split.redis.quit
     Rails.logger.info('Disconnected from Redis')
   end
@@ -27,7 +27,7 @@ after_fork do |server, worker|
   end
  
   # # If you are using Redis but not Resque, change this
-  if defined?(Afterparty)
+  if defined?(Split)
     require 'open-uri'
     uri = URI.parse(ENV["REDISTOGO_URL"] || "redis://localhost:6379")
     redis = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)

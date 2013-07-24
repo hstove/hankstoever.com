@@ -4,9 +4,15 @@
       %th Email
       %th Subscribed?
       %th Handbook?
+      %th
   %tbody
     - @customers.each do |customer|
       %tr
         %td= link_to customer.email, "mailto:#{customer.email}"
-        %td{class: "#{'icon-check' if customer.subscribed?}"}
-        %td{class: "#{'icon-check' if customer.handbook}"}
+        %td
+          %span{class: "#{'icon-check icon-large' if customer.subscribed?}"}
+        %td
+          %span{class: "#{'icon-check icon-large' if customer.handbook}"}
+        %td
+          = time_ago_in_words customer.created_at
+          ago
