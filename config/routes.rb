@@ -1,4 +1,5 @@
 Heynk::Application.routes.draw do
+  mount Afterparty::Engine, at: "afterparty", as: "afterparty_engine"
   resources :customers, only: [:create, :index]
 
   resources :posts

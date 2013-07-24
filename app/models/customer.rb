@@ -1,11 +1,11 @@
 class Customer < ActiveRecord::Base
   validates_presence_of :email
   validates_uniqueness_of :email
-
+  include QueueHelpers
 
   after_create do
-    CustomerMailer.new_customer(self.email).deliver
-    CustomerMailer.digest(self.email).deliver if self.subscribed
+    mailer(CustomerMailer, :new_customer, self.email)
+    mailer(CustomerMailer, :digest, self.email) if self.subscribed
   end
 
   def subscribed?

@@ -11,10 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130723194029) do
+ActiveRecord::Schema.define(version: 20130724000644) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "afterparty_jobs", force: true do |t|
+    t.text     "job_dump"
+    t.string   "queue"
+    t.datetime "execute_at"
+    t.boolean  "completed"
+    t.boolean  "has_error"
+    t.text     "error_message"
+    t.text     "error_backtrace"
+    t.datetime "completed_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "customers", force: true do |t|
     t.string   "email"
@@ -32,6 +45,7 @@ ActiveRecord::Schema.define(version: 20130723194029) do
     t.datetime "updated_at"
     t.string   "title"
     t.integer  "points"
+    t.integer  "views"
   end
 
 end

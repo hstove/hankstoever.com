@@ -62,7 +62,7 @@ group :test, :development do
   gem 'launchy'
   gem 'ruby-progressbar'
   gem 'better_errors'
-  gem 'meta_request'
+  # gem 'meta_request'
   gem 'quiet_assets'
   # gem 'binding_of_caller', '0.7.1'
 end

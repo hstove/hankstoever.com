@@ -15,6 +15,17 @@ class Post < ActiveRecord::Base
     string += "..."
   end
 
+  def increment(by = 1)
+    self.views ||= 0
+    self.views += by
+    self.save
+    Rails.cache.write(view_cache_title, self.views)
+  end
+
+  def view_cache_title
+    "posts_#{self.id}_views"
+  end
+
   def slug(param=self.title)
 
     # strip the string
