@@ -13,10 +13,10 @@ before_fork do |server, worker|
   end
  
   # If you are using Redis but not Resque, change this
-  if defined?(Split) && !Split.redis.nil?
-    Split.redis.quit
-    Rails.logger.info('Disconnected from Redis')
-  end
+  # if defined?(Split) && !Split.redis.nil?
+  #   Split.redis.quit
+  #   Rails.logger.info('Disconnected from Redis')
+  # end
 end
  
 after_fork do |server, worker|
@@ -27,11 +27,11 @@ after_fork do |server, worker|
   end
  
   # # If you are using Redis but not Resque, change this
-  if defined?(Split)
-    require 'open-uri'
-    uri = URI.parse(ENV["REDISTOGO_URL"] || "redis://localhost:6379")
-    redis = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
-    Split.redis = redis
-    Rails.logger.info('Connected to Redis')
-  end
+  # if defined?(Split)
+  #   require 'open-uri'
+  #   uri = URI.parse(ENV["REDISTOGO_URL"] || "redis://localhost:6379")
+  #   redis = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
+  #   Split.redis = redis
+  #   Rails.logger.info('Connected to Redis')
+  # end
 end
