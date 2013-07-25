@@ -2,7 +2,11 @@
 %html
 
   %head
-    %title Hank Stoever
+    %title
+      - if content_for? :title
+        = yield(:title)
+        = " - "
+    Hank Stoever
     = analytics_init if Rails.env.production?
     = stylesheet_link_tag    "application", "https://fonts.googleapis.com/css?family=Lato:300,400,700", "https://fonts.googleapis.com/css?family=Roboto:300italic,300,500,500italic,700italic,700", media: "all"
     = javascript_include_tag "application"
