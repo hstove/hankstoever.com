@@ -76,9 +76,10 @@ i[class*="icon-"]
 @mixin retro($spacing)
   $opacity: 0.7
   :text-shadow $spacing -#{$spacing} 0 rgba(#ecd07a, $opacity), -#{$spacing} -#{$spacing} rgba(#34b0ca, $opacity), -#{$spacing} $spacing 0 rgba(#ff628b, $opacity), $spacing $spacing 0 rgba(#3fca34, $opacity)//, 0 0 25px black
-  :color rgba(#6d34ca, 0.8)
+  $textColor: rgba(#6d34ca, 0.6)
+  :color $textColor
   a
-    :color rgba(#6d34ca, 0.8)
+    :color $textColor
     :text-decoration none
     &:hover, &:active
       :text-decoration underline
