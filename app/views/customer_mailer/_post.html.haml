@@ -1,5 +1,5 @@
 %p
   %strong
-    = link_to post.title.titleize, post_url(post)
+    = link_to post.title, post_url(post)
     = " - "
   %p= markdown(post.preview)
