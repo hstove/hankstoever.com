@@ -6,5 +6,6 @@
   - if !is_index && is_admin?
     - views = Rails.cache.read(post.view_cache_title)
     %p.description= pluralize(views, "view")
+    %p.description= pluralize(post.word_count, "words")
   .post
     = markdown(text)

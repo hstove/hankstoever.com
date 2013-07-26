@@ -15,6 +15,10 @@ class Post < ActiveRecord::Base
     string += "..."
   end
 
+  def word_count
+    body.split.size
+  end
+
   def increment(by = 1)
     self.views ||= 0
     self.views += by
