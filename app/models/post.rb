@@ -15,6 +15,22 @@ class Post < ActiveRecord::Base
     string += "..."
   end
 
+  def self.by_week
+    order('created_at asc').group_by(&:week)
+  end
+
+  def self.word_counts
+    weeks = {}
+    by_week.each do |week, posts|
+      weeks[week] = posts.collect(&:word_count).inject{|sum, count| sum += count }
+    end
+    weeks
+  end
+
+  def week
+    created_at.beginning_of_week
+  end
+
   def word_count
     body.split.size
   end

@@ -1,0 +1,7 @@
+%h1 I'm keeping track of how many words I write per week.
+
+%ul
+  - Post.word_counts.each do |week, word_count|
+    %li
+      %strong= week.strftime("%b %e %Y")
+      = "- #{word_count}"
