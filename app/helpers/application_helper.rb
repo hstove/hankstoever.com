@@ -38,4 +38,13 @@ module ApplicationHelper
     message = "You might like #{link_to "hnbuffer", "http://hnbuffer.com"}, a service for posting to hacker news at the perfect time.".html_safe
     content_tag(:p, message, class: 'highlight')
   end
+
+  def bitcoin_ad
+    # unless params['btc'] #|| Rails.env.development?
+    #   return ""
+    # end
+    message = "I'm #{link_to "crowdfunding a course", "https://uludum.org/funds/2", target: "_blank"}"
+    message += " about creating a bitcoin arbitrage bot. Pre-order the online course for just $10.00."
+    content_tag(:p, message.html_safe, class: 'highlight')
+  end
 end
