@@ -38,6 +38,6 @@ Heynk::Application.configure do
     :host => "localhost",
     :port => 3000
   }
-  
+
   config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
 end

@@ -15,4 +15,8 @@ class CustomerMailer < ActionMailer::Base
     mail to: "hstove@gmail.com", subject: "You have a new customer."
   end
 
+  def bitcoin_class email
+    mail to: email, subject: "Build your own bitcoin arbitrage bot."
+  end
+
 end
