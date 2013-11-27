@@ -7,7 +7,9 @@ class CustomerMailer < ActionMailer::Base
     @email = email
     @posts = posts
 
-    mail to: email, subject: @greeting
+    unless @posts.blank?
+      mail to: email, subject: @greeting
+    end
   end
 
   def new_customer email
@@ -16,7 +18,7 @@ class CustomerMailer < ActionMailer::Base
   end
 
   def bitcoin_class email
-    mail to: email, subject: "Build your own bitcoin arbitrage bot."
+    mail to: email, subject: "Build your own bitcoin arbitrage bot"
   end
 
 end
