@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
   scope :for_digest, -> { where("created_at > ?", 1.month.ago) }
   default_scope -> { order("created_at desc") }
   def html
-    Bluecloth.new(body).to_html.html_safe
+    Maruku.new(body).to_html.html_safe
   end
 
   def to_param

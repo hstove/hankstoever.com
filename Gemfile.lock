@@ -163,6 +163,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    maruku (0.7.0)
     memcachier (0.0.2)
     metaclass (0.0.1)
     mime-types (1.23)
@@ -326,6 +327,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   lorem-ipsum
+  maruku
   memcachier
   mobylette!
   mocha
