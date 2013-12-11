@@ -3,6 +3,10 @@ Heynk::Application.routes.draw do
   resources :customers, only: [:create, :index]
 
   resources :posts
+  mount Split::Dashboard, :at => 'split'
+
+  get "/btc" => "pages#bitcoin", as: :btc
+  # this should be last
   get "/:template" => "pages#show", as: "page"
 
   # The priority is based upon order of creation: first created -> highest priority.
