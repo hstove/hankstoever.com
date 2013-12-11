@@ -1,2 +1,7 @@
 - content_for :title, @post.title.titleize
 = render @post
+
+%h2 Read Next
+
+- @post.similar.each do |post|
+  %p= link_to post.title, post

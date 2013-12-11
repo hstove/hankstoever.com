@@ -67,4 +67,18 @@ class Post < ActiveRecord::Base
     ret.gsub! ".", "-"
     ret
   end
+
+  # adapted from:
+  # http://insideintercom.io/machine-learning-way-easier-than-it-looks/
+  def similar
+    title_keywords = self.title.split(' ')
+    posts = Post.all.to_a.sort do |post1, post2|
+      post1_title_intersection = post1.body.split(' ') & title_keywords
+      post2_title_intersection = post2.body.split(' ') & title_keywords
+
+      post2_title_intersection.length <=> post1_title_intersection.length
+    end
+    posts.delete self
+    posts[0..4].shuffle[0..1]
+  end
 end
