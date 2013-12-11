@@ -43,12 +43,8 @@ module ApplicationHelper
     # unless params['btc'] #|| Rails.env.development?
     #   return ""
     # end
-    message = "I'm #{link_to "crowdfunding a course", btc_path, target: "_blank"}"
-    message += " about creating a bitcoin arbitrage bot. "
-    ab_test "bitcoin-action", "Pre-order the online course", "Reserve early access" do |action|
-      message += action
-    end
-    message += " for just $10.00."
+    message = "I'm #{link_to "crowdfunding a course", "https://uludum.org/funds/2", target: "_blank"}"
+    message += " about creating a bitcoin arbitrage bot. Pre-order the online course for just $10.00."
     content_tag(:p, message.html_safe, class: 'highlight')
   end
 end

@@ -21,13 +21,5 @@ module Heynk
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-
-    require 'open-uri'
-    uri = URI.parse(ENV["REDISTOGO_URL"] || "redis://localhost:6379")
-    redis = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
-
-    config.redis = redis
-    Split.redis = redis
-    Split.redis.namespace = "hankstoever.com"
   end
 end
