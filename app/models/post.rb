@@ -81,4 +81,10 @@ class Post < ActiveRecord::Base
     posts.delete self
     posts[0..4].shuffle[0..1]
   end
+
+  # Returns estimated minutes to read a post
+  def reading_time
+    word_count / 200
+  end
+
 end

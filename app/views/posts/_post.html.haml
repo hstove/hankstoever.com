@@ -1,6 +1,10 @@
-= cache [post, params['action']] do
+= cache [post, params['action'], 'v2'] do
   %h1.title= link_to post.title, post, class: 'plain'
-  %p.description= "posted #{time_ago_in_words(post.created_at)} ago"
+  %p.description
+    = "posted #{time_ago_in_words(post.created_at)} ago"
+    = " - "
+    = [1,post.reading_time.to_i].max
+    min read
   - is_index = params['action'] == "index"
   - text = is_index ? post.preview : post.body
   - if !is_index && is_admin?
