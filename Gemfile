@@ -43,7 +43,7 @@ group :test, :development do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'capybara-webkit'
-  gem 'guard', '1.3.3'
+  gem 'guard', '>=2.1.0'
   gem 'spork'
   # gem 'spork-rails'
   gem 'guard-rails'

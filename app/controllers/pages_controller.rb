@@ -11,6 +11,6 @@ class PagesController < ApplicationController
   def bitcoin
     finished("bitcoin-action")
 
-    redirect_to "https://uludum.org/funds/2"
+    redirect_to "https://www.uludum.org/funds/2"
   end
 end
