@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/amro/gibbon.git
+  revision: 0df0c83dad81c4a176e5ab2f30b075fe9c014de5
+  specs:
+    gibbon (2.0.0)
+      httparty
+      multi_json (>= 1.3.4)
+
+GIT
   remote: git://github.com/hstove/afterparty.git
   revision: 8d68f907ed95a458d0dcaac49563e7125145cd80
   specs:
@@ -318,6 +326,7 @@ DEPENDENCIES
   exception_notification!
   factory_girl_rails
   font-awesome-sass-rails
+  gibbon!
   google-analytics-rails
   guard (>= 2.1.0)
   guard-livereload

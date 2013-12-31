@@ -28,6 +28,7 @@ gem 'albino'
 gem 'nokogiri'
 gem 'bootstrap-sass'
 gem 'mobylette', github: 'hstove/mobylette'
+gem 'gibbon', github: "amro/gibbon"
 # gem 'github-markup', require: 'github/markup'
 
 group :doc do
