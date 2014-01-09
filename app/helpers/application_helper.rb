@@ -40,13 +40,9 @@ module ApplicationHelper
   end
 
   def bitcoin_ad
-    # unless params['btc'] #|| Rails.env.development?
-    #   return ""
-    # end
-    banner = "I'm #{link_to "crowdfunding a course", btc_path, target: "_blank"}"
-    banner += " about creating a bitcoin arbitrage bot. "
-    action = ab_test("bitcoin-action", "Pre-order the online course", "Reserve early access")
-    banner += "#{action} for just $10.00."
-    content_tag(:p, banner.html_safe, class: 'highlight')
+    banner = "I made a course about #{link_to "running your own bitcoin arbitrage bot", btc_path, target: "_blank"}."
+    banner += " It's based off my open source project, #{link_to 'rbtc_arbitrage', "https://github.com/hstove/rbtc_arbitrage"}."
+    bg_color = ab_test "ad_background_color","143,172,104", "205,215,182", "251,184,41", "211,25,150", "22,147,165"
+    content_tag(:p, banner.html_safe, class: 'highlight', style: "background-color: rgba(#{bg_color},0.3)")
   end
 end
