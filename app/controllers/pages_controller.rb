@@ -9,7 +9,7 @@ class PagesController < ApplicationController
   end
 
   def bitcoin
-    finished("bitcoin-action")
+    finished("ad_background_color")
 
     redirect_to "https://www.uludum.org/courses/118"
   end
