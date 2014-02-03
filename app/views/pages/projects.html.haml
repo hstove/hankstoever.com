@@ -6,16 +6,19 @@
       = link_to "Open Source Report Card", "http://osrc.dfm.io/hstove"
 
   %h4 Websites
-  = project "404kids.org", "http://404kids.org", "An easy way to add a missing child ad to your 404 page."
   = project "uludum.org", "http://uludum.org", "An open platform for education."
+  = project "404kids.org", "http://404kids.org", "An easy way to add a missing child ad to your 404 page."
   = project "hnbuffer.com", "http://hnbuffer.com", "Automatically post to #{link_to "Hacker News", "http://news.ycombinator.com"} at the right time."
   = project "seattleubooks.com", "http://www.seattleubooks.com/", "A website for Seattle University students to find their textbooks by class and buy them on Amazon."
   = project "hankstoever.com", "http://hankstoever.com", "My personal website."
+  = project "gender.hankstoever.com", "http://github.com/hstove/gender", "A web interface for testing my #{link_to 'gender classifier', 'https://github.com/hstove/gender'}"
   /= project "RhinosaurusBand.com", "http://rhinosaurusband.com", "A friend's band."
 
   %h4 Github Projects
   = project "rbtc_arbitrage", "https://github.com/hstove/rbtc_arbitrage", "A bitcoin arbitrage client."
   = project "Afterparty", "https://github.com/hstove/afterparty", "A modest Rails 4 compatible queue with support for executing jobs in the future and serialization with ActiveRecord."
+  = project 'gender', 'https://github.com/hstove/gender', "A classifier for determining gender based off of first names. Written in Go."
+  = project 'genetic', 'https://github.com/hstove/genetic', "A simple genetic algorithms library written in Go."
   - descript = "A #{dynamo_tag :span, %w{light simple basic}, center: true, delay: 1300, speed: 100}"
   - descript += " library for using #{link_to "dynamo.js", "http://jordanscales.com/dynamo/", target: '_blank'} with Ruby on Rails."
   = project "dynamojs_rails", "https://github.com/hstove/dynamojs_rails", descript
