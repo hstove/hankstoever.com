@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Heynk::Application.config.secret_key_base = '497915cecce194a2e86e5c7f3b223d79ae7ef815b6d0ee85512ed36e2aec4845073d7e0d6bb6e41ab05e4ab80af56587eaa8f5b454fda64d0f0990dd84440fbc'
+Heynk::Application.config.secret_key_base = ENV['HANK_SECRET_TOKEN'] || ('b'*30)
