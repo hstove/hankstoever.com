@@ -12,3 +12,5 @@ guard
 ~~~
 
 Once the server has started, open your browser to [localhost:3000](http://localhost:3000)
+
+https://www.codeship.io/projects/18e2e1d0-8586-0131-9bea-32536bdbb4f9/status
