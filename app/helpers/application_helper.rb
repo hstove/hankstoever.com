@@ -42,6 +42,7 @@ module ApplicationHelper
   def bitcoin_ad
     banner = "I made a course about #{link_to "running your own bitcoin arbitrage bot", btc_path, target: "_blank"}."
     banner += " It's based off my open source project, #{link_to 'rbtc_arbitrage', "https://github.com/hstove/rbtc_arbitrage"}."
+    banner += content_tag :strong, " 50% off until May 1st!"
     bg_color = ab_test "ad_background_color","143,172,104", "205,215,182", "251,184,41", "211,25,150", "22,147,165"
     content_tag(:p, banner.html_safe, class: 'highlight', style: "background-color: rgba(#{bg_color},0.3)")
   end
