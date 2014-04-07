@@ -1,6 +1,9 @@
 - content_for :title, @post.title.titleize
 = render @post
 
+= render partial: "disqus", locals: {post: @post}
+%br
+
 %h2 Read Next
 
 - @post.similar.each do |post|
