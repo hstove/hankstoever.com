@@ -42,8 +42,8 @@
         %p.link= link_to "Blog", posts_path
         = render partial: "customers/form"
     #main
-      = hn_ad
-      = bitcoin_ad
+      /= hn_ad
+      /= bitcoin_ad
       - if notice
         %p.notice= notice
       = yield
