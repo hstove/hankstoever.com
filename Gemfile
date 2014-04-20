@@ -30,6 +30,7 @@ gem 'bootstrap-sass'
 gem 'mobylette', github: 'hstove/mobylette'
 gem 'gibbon', github: "amro/gibbon"
 gem "rails_best_practices"
+gem 'rails_12factor'
 # gem 'github-markup', require: 'github/markup'
 
 group :doc do
