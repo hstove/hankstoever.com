@@ -6,6 +6,7 @@
       = link_to "Open Source Report Card", "http://osrc.dfm.io/hstove"
 
   %h4 Websites
+  = project "issuestats.com", "http://issuestats.com", "A website for analyzing how long it takes for Github issues and pull requests to close. <strong>Winner of the #{link_to "2014 Github Data Challenge", 'https://github.com/blog/1892-third-annual-data-challenge-winners'}</strong>"
   = project "uludum.org", "http://uludum.org", "An open platform for education."
   = project "404kids.org", "http://404kids.org", "An easy way to add a missing child ad to your 404 page."
   = project "hnbuffer.com", "http://hnbuffer.com", "Automatically post to #{link_to "Hacker News", "http://news.ycombinator.com"} at the right time."
@@ -15,10 +16,13 @@
   /= project "RhinosaurusBand.com", "http://rhinosaurusband.com", "A friend's band."
 
   %h4 Github Projects
+  = project "issue_stats",
+            "https://github.com/hstove/issue_stats",
+            "Github repository for #{link_to "issuestats.com", "http://issuestats.com"}. Built with Rails 4.1."
   = project "rbtc_arbitrage", "https://github.com/hstove/rbtc_arbitrage", "A bitcoin arbitrage client."
   = project "Afterparty", "https://github.com/hstove/afterparty", "A modest Rails 4 compatible queue with support for executing jobs in the future and serialization with ActiveRecord."
   = project 'gender', 'https://github.com/hstove/gender', "A classifier for determining gender based off of first names. Written in Go."
-  = project 'hankstoever.com', "https://github.com/hstove/gender", "My personal website, which you're currently on."
+  = project 'hankstoever.com', "https://github.com/hstove/hankstoever.com", "My personal website, which you're currently on."
   = project 'genetic', 'https://github.com/hstove/genetic', "A simple genetic algorithms library written in Go."
   - descript = "A #{dynamo_tag :span, %w{light simple basic}, center: true, delay: 1300, speed: 100}"
   - descript += " library for using #{link_to "dynamo.js", "http://jordanscales.com/dynamo/", target: '_blank'} with Ruby on Rails."
