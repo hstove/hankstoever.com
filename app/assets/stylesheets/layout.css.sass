@@ -72,10 +72,6 @@ a, a:visited
   //a
   //  :font-size 16px
 
-i[class*="icon-"]
-  :opacity 0.7
-  :margin 0 10px
-
 @mixin retro($spacing)
   $opacity: 0.7
   :text-shadow $spacing -#{$spacing} 0 rgba(#ecd07a, $opacity), -#{$spacing} -#{$spacing} rgba(#34b0ca, $opacity), -#{$spacing} $spacing 0 rgba(#ff628b, $opacity), $spacing $spacing 0 rgba(#3fca34, $opacity)//, 0 0 25px black
@@ -109,8 +105,15 @@ code
   :font-size 12px
 
 .highlight
-  :background-color #FDE7FF
-  :padding 6px
+  :background-color #ECE4F5
+  :padding 15px
+  :font-size 16px
+  line-height: 1.5em
+  font-weight: bolder
+
+.ad
+  .fa
+    font-size: 72px
 
 .book-cover
   $color: $purple
@@ -196,4 +199,3 @@ pre
   :overflow-x scroll
 pre, code
   :background-color lighten(black, 90)
-

@@ -10,6 +10,12 @@
  *
  *= require_self
  *= require_tree .
- *= require _font-awesome
  * require bootstrap-responsive
  */
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "bootstrap-sprockets";
+@import "bootstrap/mixins";
+@import "bootstrap/variables";
+@import "bootstrap/grid";

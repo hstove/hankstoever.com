@@ -19,18 +19,19 @@ gem 'split', require: 'split/dashboard'
 gem 'afterparty', github: 'hstove/afterparty'
 gem 'dynamojs_rails'
 gem 'bluecloth'
-gem 'font-awesome-sass-rails'
+gem 'font-awesome-sass', '~> 4.2.0'
 gem 'memcachier'
 gem 'octokit'
 gem 'redcarpet'
 gem 'maruku'
 gem 'albino'
 gem 'nokogiri'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.2.0'
 gem 'mobylette', github: 'hstove/mobylette'
 gem 'gibbon', github: "amro/gibbon"
 gem "rails_best_practices"
 gem 'rails_12factor'
+gem 'autoprefixer-rails'
 # gem 'github-markup', require: 'github/markup'
 
 group :doc do

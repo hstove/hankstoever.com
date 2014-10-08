@@ -10,9 +10,9 @@
       %tr
         %td= link_to customer.email, "mailto:#{customer.email}"
         %td
-          %span{class: "#{'icon-check icon-large' if customer.subscribed?}"}
+          = icon(:check, '', class: "icon-large") if customer.subscribed?
         %td
-          %span{class: "#{'icon-check icon-large' if customer.handbook}"}
+          = icon(:check, '', class: "icon-large") if customer.handbook
         %td
           = time_ago_in_words customer.created_at
           ago

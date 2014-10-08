@@ -27,14 +27,14 @@
           = link_to "up global", "http://up.co"
         %br
         %p.description
-          Seattle -
-          = link_to "", "mailto:hstove@gmail.com", class: 'icon-envelope'
-          = link_to "", "https://github.com/hstove", class: 'icon-github', target: '_blank'
-          = link_to "", "http://www.linkedin.com/in/hankstoever", class: 'icon-linkedin', target: '_blank'
-          = link_to "", "https://twitter.com/heynky", class: 'icon-twitter', target: '_blank'
+          Seattle, Earth -
+          = link_to icon("envelope"), "mailto:hstove@gmail.com"
+          = link_to icon("github"), "https://github.com/hstove", target: '_blank'
+          = link_to icon("linkedin"), "http://www.linkedin.com/in/hankstoever", target: '_blank'
+          = link_to icon("twitter"), "https://twitter.com/heynky", target: '_blank'
           - google_url = "https://plus.google.com/114545204071567890438?rel=author"
-          = link_to "", google_url, class: 'icon-google-plus', target: '_blank'
-          = link_to "", posts_url(format: :rss), class: 'icon-rss', target: '_blank'
+          = link_to icon("google-plus"), google_url, target: '_blank'
+          = link_to icon("rss"), posts_url(format: :rss), target: '_blank'
           = link_to "https://rubygems.org/profiles/heynk" do
             = image_tag "/images/ruby.png", height: 11, target: "_blank"
         %br
@@ -44,6 +44,7 @@
     #main
       /= hn_ad
       /= bitcoin_ad
+      = render "layouts/bitcoin_rails_ad"
       - if notice
         %p.notice= notice
       = yield
