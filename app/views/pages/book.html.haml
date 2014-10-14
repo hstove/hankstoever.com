@@ -1,9 +1,12 @@
+- content_for :title do
+  How to Become a Programmer - The Self-Taught Software Developer's Handbook
 .book
 .book-cover
   .fade
-    %p.book-title The Self-Taught Developer's Handbook
+    %p.book-title The Self-Taught Software Develper's Handbook
     %br
-    /%p A book about learning to learn.
+    %p.book-subtitle How to Become a Programmer
+    %br
     /- 4.times do
     /  %br
     %p By Hank Stoever
@@ -13,7 +16,7 @@
 = render "customers/book_form"
 
 = render "pages/book/toc"
-  
+
 = render "customers/book_form"
 
 = render "pages/book/faq"
