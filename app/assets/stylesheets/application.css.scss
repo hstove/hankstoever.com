@@ -11,6 +11,7 @@
  *= require_self
  *= require_tree .
  * require bootstrap-responsive
+ *= require_directory ./pages
  */
 
 @import "font-awesome-sprockets";
