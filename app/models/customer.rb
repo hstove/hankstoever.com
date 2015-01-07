@@ -6,9 +6,9 @@ class Customer < ActiveRecord::Base
   scope :subscribers, -> { where('subscribed = ?', true)}
 
   after_create do
-    mailer(CustomerMailer, :new_customer, self.email)
-    mailer(CustomerMailer, :bitcoin_class, self.email)
-    mailer(CustomerMailer, :digest, self.email) if self.subscribed
+    # mailer(CustomerMailer, :new_customer, self.email)
+    # mailer(CustomerMailer, :bitcoin_class, self.email)
+    # mailer(CustomerMailer, :digest, self.email) if self.subscribed
     subscribe_to_mailchimp
   end
 
@@ -32,7 +32,6 @@ class Customer < ActiveRecord::Base
       id: list_id,
       email: {email: email},
       merge_vars: merge_vars,
-      double_optin: false,
       send_welcome: true,
     })
     response
