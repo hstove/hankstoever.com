@@ -40,7 +40,15 @@
         %br
         = link :projects
         %p.link= link_to "Blog", posts_path
-        = render partial: "customers/form"
+        =# render partial: "customers/form"
+        %br
+        %br
+        %p
+          = link_to "/book", class: "book-link" do
+            Are you a self-taught programmer?
+            %br
+            %br
+            I'm writing a guide for you.
     #main
       /= hn_ad
       /= bitcoin_ad
