@@ -1,53 +1,184 @@
 ---
 projects:
   websites:
-    with_images:
-      -
-        description: >
-          A website for analyzing how long it takes for Github issues and
-          pull requests to close. <br> <strong>Winner of the
-          <a href='https://github.com/blog/1892-third-annual-data-challenge-winners'>
-          2014 Github Data Challenge</a></strong>
-        image: issuestats.png
-        name: issuestats.com
-        url: "http://issuestats.com"
-      -
-        name: "uludum.org"
-        url: "https://www.uludum.org"
-        description: An open platform for education.
-        image: uludum.png
-      -
-        name: copypastecsv
-        url: http://copypastecsv.herokuapp.com
-        image: copypastecsv.png
-        description: A pastebin-like site for CSV's.
-      -
-        name: "gender.hankstoever.com"
-        url: "http://github.com/hstove/gender"
-        description: >
-          A web interface for testing my <a href='https://github.com/hstove/gender'>gender classifier</a>.
-        image: gender.png
-    without_images:
-      -
-        name: "404kids.org"
-        url: "http://404kids.org"
-        description: >
-          An easy way to add a missing child ad to your 404 page.
-      -
-        name: "hnbuffer.com"
-        url: "http://hnbuffer.com"
-        description: >
-          Automatically post to <a href="http://news.ycombinator.com">
-          Hacker News</a> at the right time.
-      -
-        name: "seattleubooks.com"
-        url: "http://www.seattleubooks.com/"
-        description: >
-          A website for Seattle University students to find their
-          textbooks by class and buy them on Amazon.
-      -
-        name: "hankstoever.com"
-        url: "http://hankstoever.com"
-        description: >
-          My personal website. Available
-          <a href="https://github.com/hstove/hankstoever.com">on Github</a>.
+    -
+      description: >
+        Analyze how long it takes for Github issues and
+        pull requests to close. <br><br><strong>Winner of the
+        <a href='https://github.com/blog/1892-third-annual-data-challenge-winners'>
+        2014 Github Data Challenge</a></strong>
+      image: issuestats.png
+      name: issuestats.com
+      url: "http://issuestats.com"
+    -
+      name: "uludum.org"
+      url: "https://www.uludum.org"
+      description: An open platform for education.
+      image: uludum.png
+    -
+      name: copypastecsv
+      url: http://copypastecsv.herokuapp.com
+      image: copypastecsv.png
+      description: A pastebin-like site for CSV's.
+    -
+      name: "gender.hankstoever.com"
+      url: "http://github.com/hstove/gender"
+      description: >
+        A web interface for testing my <a href='https://github.com/hstove/gender'>gender classifier</a>.
+      image: gender.png
+    -
+      name: "404kids.org"
+      url: "http://404kids.org"
+      description: >
+        An easy way to add a missing child ad to your 404 page.
+    -
+      name: "hnbuffer.com"
+      url: "http://hnbuffer.com"
+      description: >
+        Automatically post to <a href="http://news.ycombinator.com">
+        Hacker News</a> at the right time.
+    -
+      name: "seattleubooks.com"
+      url: "http://www.seattleubooks.com/"
+      description: >
+        A website for Seattle University students to find their
+        textbooks by class and buy them on Amazon.
+    -
+      name: "hankstoever.com"
+      url: "http://hankstoever.com"
+      description: >
+        My personal website. Available
+        <a href="https://github.com/hstove/hankstoever.com">on Github</a>.
+  github:
+    - :name: issue_stats
+      :url: https://github.com/hstove/issue_stats
+      github: hstove/issue_stats
+      :description: Github repository for <a href="http://issuestats.com">issuestats.com</a>.
+        Built with Rails 4.1.
+      languages:
+        - ruby
+        - javascript
+    - :name: rbtc_arbitrage
+      :url: https://github.com/hstove/rbtc_arbitrage
+      github: hstove/rbtc_arbitrage
+      :description: A bitcoin arbitrage client.
+      languages:
+        - ruby
+    - :name: Afterparty
+      :url: https://github.com/hstove/afterparty
+      github: hstove/afterparty
+      :description: A modest Rails 4 compatible queue with support for executing jobs
+        in the future and serialization with ActiveRecord.
+      languages:
+        - ruby
+    - :name: gender
+      :url: https://github.com/hstove/gender
+      github: hstove/gender
+      :description: A classifier for determining gender based off of first names. Written
+        in Go.
+      languages:
+        - go
+    - :name: hankstoever.com
+      :url: https://github.com/hstove/hankstoever.com
+      github: hstove/hankstoever.com
+      :description: My personal website, which you're currently on.
+      languages:
+        - ruby
+    - :name: genetic
+      :url: https://github.com/hstove/genetic
+      github: hstove/genetic
+      :description: A simple genetic algorithms library written in Go.
+      languages:
+        - go
+    - :name: dynamojs_rails
+      :url: https://github.com/hstove/dynamojs_rails
+      github: hstove/dynamojs_rails
+      :description: A <span class="dynamo" data-center="true" data-delay="1300" data-lines="simple,basic"
+        data-speed="100">light</span> library for using <a href="http://jordanscales.com/dynamo/"
+        target="_blank">dynamo.js</a> with Ruby on Rails.
+      languages:
+        - ruby
+    - :name: Guard-Play
+      :url: https://github.com/hstove/guard-play
+      github: hstove/guard-play
+      :description: A <a href="https://github.com/guard/guard" target="_blank">guard</a>
+        plugin for watching and automatically running <a href="http://www.playframework.com/"
+        target="_blank">Play Framework</a> tests.
+      languages:
+        - ruby
+    - :name: Game of Life
+      :url: https://github.com/hstove/game-of-life
+      github: hstove/game-of-life
+      :description: An implementation of the classic <a href="http://en.wikipedia.org/wiki/Conway&#39;s_Game_of_Life"
+        target="_blank">Game of Life</a>. <a class="icon-external-link" href="http://gol.hankstoever.com"
+        target="_blank"></a>
+      languages:
+        - ruby
+        - javascript
+  open_source:
+    - :name: 'thor #429'
+      :url: https://github.com/erikhuda/thor/pull/429
+      :description: "[feature] Allow negative numbers when providing a <code>numeric</code>
+        argument."
+    - :name: 'mobylette #34'
+      :url: https://github.com/tscolari/mobylette/pull/34
+      :description: '[bug fix] A gem for <a href="/posts.1">rendering different templates
+        for mobile requests</a>.'
+    - :name: 'hurl.it #11'
+      :url: https://github.com/twilio/hurl/pull/11
+      :description: "[feature, fix] A webapp for debugging HTTP requests."
+    - :name: 'gga4r #3'
+      :url: https://github.com/spejman/gga4r/pull/3
+      :description: "[bug fix] A ruby gem for running genetic algorithms."
+    - :name: 'nifty-generators #158'
+      :url: https://github.com/ryanb/nifty-generators/pull/158
+      :description: "[bug fix] A group of nifty rails generators for authentication, layouts,
+        and more."
+    - :name: 'omniauth #678'
+      :url: https://github.com/intridea/omniauth/pull/678
+      :description: "[documentation] A flexible authentication system."
+    - :name: 'statsample #6'
+      :url: https://github.com/clbustos/statsample/pull/6/files
+      :description: "[bug fix] A general purpose statistics library."
+  dailycred:
+    - :name: Ruby on Rails Engine
+      :url: https://github.com/dailycred/dailycred
+      github: dailycred/dailycred
+      :description:
+    - :name: Objective-C Library
+      :url: https://github.com/dailycred/objective-dc
+      github: dailycred/objective-dc
+      :description:
+    - :name: Node.js Module
+      :url: https://github.com/dailycred/passport-dailycred
+      github: dailycred/passport-dailycred
+      :description:
+    - :name: jQuery Plugin
+      :url: https://github.com/dailycred/jquery.dailycred
+      github: dailycred/jquery.dailycred
+      :description:
+    - :name: Client-Side Javascript Library
+      :url: https://github.com/dailycred/dailycred.js
+      github: dailycred/dailycred.js
+      :description:
+    - :name: Launchy
+      :url: https://github.com/dailycred/launchy
+      github: dailycred/launchy
+      :description: An open-source rails template for instantly creating a landing page
+        with a robust user account system.
+  up:
+    -
+      name: Startup Digest
+      url: https://www.startupdigest.com
+      description: The personalized insider newsletter for all things startup in your area
+      image: startup-digest.png
+    -
+      name: Community Sites
+      url: http://london.up.co
+      description: Spotlighting the local activities, resources, and people in startup communities around the world.
+      image: community-sites.png
+    -
+      name: SWOOP
+      url: https://swoop.up.co
+      description: Our internal event management app. Custom built with Node.js and Backbone.
+      image: swoop.png

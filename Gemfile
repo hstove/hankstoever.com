@@ -34,6 +34,7 @@ gem 'rails_12factor'
 gem 'autoprefixer-rails'
 gem "rails_config"
 # gem 'github-markup', require: 'github/markup'
+gem 'bootswatch-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -71,6 +72,7 @@ group :test, :development do
   # gem 'meta_request'
   gem 'quiet_assets'
   # gem 'binding_of_caller', '0.7.1'
+  gem 'dotenv-rails'
 end
 
 # gem 'bcrypt-ruby', '~> 3.0.0'

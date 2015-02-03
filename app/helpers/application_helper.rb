@@ -6,20 +6,8 @@ module ApplicationHelper
     end
   end
 
-  def project name, url, description=nil
-    html = content_tag :p, class: "project" do
-      repo = Octokit::Repository.from_url(url)
-      inner = link_to name, url, target: '_blank'
-      unless description.nil?
-        inner << content_tag(:span, (" - " + description).html_safe)
-      end
-      inner
-    end
-  end
-
-  def project_thumb name, url, image, description=nil
-    locals = { name: name, url: url, description: description, image: image }
-    render partial: 'pages/project', locals: locals
+  def project_thumb project
+    render partial: 'pages/project', locals: { project: project }
   end
 
   def markdown(text)
@@ -50,5 +38,14 @@ module ApplicationHelper
     banner += content_tag :strong, " 50% off until May 1st!"
     bg_color = ab_test "ad_background_color","143,172,104", "205,215,182", "251,184,41", "211,25,150", "22,147,165"
     content_tag(:p, banner.html_safe, class: 'highlight', style: "background-color: rgba(#{bg_color},0.3)")
+  end
+
+  def language_label lang
+    classes = {
+      "ruby" => 'danger',
+      "go" => 'success',
+      "javascript" => 'warning'
+    }
+    content_tag :small, lang.titleize, class: "text-#{classes[lang] || 'default'}"
   end
 end

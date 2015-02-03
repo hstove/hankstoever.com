@@ -1,50 +1,50 @@
 = cache "projects_page" do
-  -# %blockquote
-  -#   %p Hank is a serious Ruby expert with a surprisingly broad knowledge of JavaScript as well.
-  -#   %small
-  -#     = "-"
-  -#     = link_to "Open Source Report Card", "http://osrc.dfm.io/hstove"
-
-  %h4 Websites
-  - Settings.projects.websites.with_images.in_groups_of(2, false) do |projects|
-    .row
-      - projects.each do |project|
-        = project_thumb project.name, project.url, project.image, project.description
   .row
-    - Settings.projects.websites.without_images.each do |project|
-      = project project.name, project.url, project.description
+    .col-md-12.text-center
+      %h1 Projects
 
-  %h4 Github Projects
-  = project "issue_stats",
-            "https://github.com/hstove/issue_stats",
-            "Github repository for #{link_to "issuestats.com", "http://issuestats.com"}. Built with Rails 4.1."
-  = project "rbtc_arbitrage", "https://github.com/hstove/rbtc_arbitrage", "A bitcoin arbitrage client."
-  = project "Afterparty", "https://github.com/hstove/afterparty", "A modest Rails 4 compatible queue with support for executing jobs in the future and serialization with ActiveRecord."
-  = project 'gender', 'https://github.com/hstove/gender', "A classifier for determining gender based off of first names. Written in Go."
-  = project 'hankstoever.com', "https://github.com/hstove/hankstoever.com", "My personal website, which you're currently on."
-  = project 'genetic', 'https://github.com/hstove/genetic', "A simple genetic algorithms library written in Go."
-  - descript = "A #{dynamo_tag :span, %w{light simple basic}, center: true, delay: 1300, speed: 100}"
-  - descript += " library for using #{link_to "dynamo.js", "http://jordanscales.com/dynamo/", target: '_blank'} with Ruby on Rails."
-  = project "dynamojs_rails", "https://github.com/hstove/dynamojs_rails", descript
-  = project "Guard-Play", "https://github.com/hstove/guard-play", "A #{link_to("guard","https://github.com/guard/guard", target: '_blank')} plugin for watching and automatically running #{link_to "Play Framework", "http://www.playframework.com/", target: '_blank'} tests."
-  = project "Game of Life", "https://github.com/hstove/game-of-life", "An implementation of the classic #{link_to "Game of Life", "http://en.wikipedia.org/wiki/Conway's_Game_of_Life", target: "_blank"}. #{link_to "", "http://gol.hankstoever.com", class: 'icon-external-link', target: "_blank"}"
+  %div{:role => "tabpanel"}
+  / Nav tabs
+  .row
+    .col-md-12.text-center
+      .btn-group.project-tabs
+        %a.btn.btn-default.active{"aria-controls" => "home", "data-toggle" => "tab", :href => "#personal", :role => "tab"} Personal
+        %a.btn.btn-default{"aria-controls" => "profile", "data-toggle" => "tab", :href => "#professional", :role => "tab"} Professional
+      -# .nav.nav-pills.text-center.btn-group{:role => "tablist"}
+      -#   -# %li.active{:role => "presentation"}
+      -#   %a.btn.btn-default.active{"aria-controls" => "home", "data-toggle" => "tab", :href => "#personal", :role => "tab"} Personal
+      -#   -# %li{:role => "presentation"}
+      -#   %a.btn.btn-default{"aria-controls" => "profile", "data-toggle" => "tab", :href => "#professional", :role => "tab"} Professional
+  / Tab panes
+  .tab-content
+    #personal.tab-pane.active{:role => "tabpanel"}
+      %h4 Websites
+      .row
+        - Settings.projects.websites.each do |project|
+          = project_thumb project
 
-  %h4 Open Source Contributions
-  = project "thor #429", "https://github.com/erikhuda/thor/pull/429", "[feature] Allow negative numbers when providing a #{content_tag(:code, 'numeric')} argument."
-  = project "mobylette #34", "https://github.com/tscolari/mobylette/pull/34", "[bug fix] A gem for #{link_to "rendering different templates for mobile requests", posts_path(1)}."
-  = project "hurl.it #11", "https://github.com/twilio/hurl/pull/11", "[feature, fix] A webapp for debugging HTTP requests."
-  = project "gga4r #3", "https://github.com/spejman/gga4r/pull/3", "[bug fix] A ruby gem for running genetic algorithms."
-  = project "nifty-generators #158", "https://github.com/ryanb/nifty-generators/pull/158", "[bug fix] A group of nifty rails generators for authentication, layouts, and more."
-  = project "omniauth #678", "https://github.com/intridea/omniauth/pull/678", "[documentation] A flexible authentication system."
-  = project "statsample #6", "https://github.com/clbustos/statsample/pull/6/files", "[bug fix] A general purpose statistics library."
+      %h4 Github Projects
+      .row
+        - Settings.projects.github.each do |project|
+          = project_thumb project
 
-  %h4
-    = link_to "Dailycred", "https://www.dailycred.com"
-    Integration Libraries
-    %span.label Lead Platform Engineer 2011-2013
-  = project "Ruby on Rails Engine", "https://github.com/dailycred/dailycred"
-  = project "Objective-C Library", "https://github.com/dailycred/objective-dc"
-  = project "Node.js Module", "https://github.com/dailycred/passport-dailycred"
-  = project "jQuery Plugin", "https://github.com/dailycred/jquery.dailycred"
-  = project "Client-Side Javascript Library", "https://github.com/dailycred/dailycred.js"
-  = project "Launchy", "https://github.com/dailycred/launchy", "An open-source rails template for instantly creating a landing page with a robust user account system."
+      %h4 Open Source Contributions
+      .row
+        - Settings.projects.open_source.each do |project|
+          = project_thumb project
+
+    #professional.tab-pane{:role => "tabpanel"}
+      %h4
+        = link_to "UP Global", "https://www.up.co"
+        %span.label Software Engineer 2013-current
+      .row
+        - Settings.projects.up.each do |project|
+          = project_thumb project
+
+      %h4
+        = link_to "Dailycred", "https://www.dailycred.com"
+        Integration Libraries
+        %span.label Lead Platform Engineer 2011-2013
+      .row
+        - Settings.projects.dailycred.each do |project|
+          = project_thumb project

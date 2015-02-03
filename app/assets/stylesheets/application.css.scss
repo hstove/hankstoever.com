@@ -9,14 +9,18 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
- * require bootstrap-responsive
  *= require_directory ./pages
  */
 
+
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "variables";
+@import "bootswatch/lumen/variables";
 @import "bootstrap-sprockets";
-@import "bootstrap/mixins";
-@import "bootstrap/variables";
 @import "bootstrap";
+@import "bootswatch/lumen/bootswatch";
+@import "layout";
+@import "customers";
+@import "pages";
+@import "posts";

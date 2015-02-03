@@ -12,7 +12,7 @@ class Post < ActiveRecord::Base
   def preview
     index = body.index("\n")
     string = index.nil? ? body : body[0...index]
-    string += "..."
+    string += "\n\n\n<small>(Continued)</small>"
   end
 
   def self.by_week

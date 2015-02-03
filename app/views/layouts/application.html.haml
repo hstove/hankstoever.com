@@ -13,46 +13,50 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
     = favicon_link_tag
-  %body.row
-    #sidebar
-      =# cache "sidebar" do
-      = image_tag "https://secure.gravatar.com/avatar/73719c8eb97a63acd87f2f0a918a5005?s=300", class: "avatar", width: 300, height: 300
-      .desc
-        %h1.retro= link_to "Hank Stoever", root_url
-        %p.description
+  %body
+    %nav.navbar.navbar-default
+      .row.text-center
+        .navbar-nav.nav.col-md-12
+          - clazz = 'col-md-2 text-center'
+          %li{ class: PostsController === controller ? "#{clazz} active" : clazz }
+            = link_to "Blog", posts_path
+          %li{ class: params[:template] == 'projects' ? "#{clazz} active" : clazz }
+            = link_to "Projects", page_path(template: :projects)
+          %li.col-md-4.col-md-offset-0.text-center
+            = image_tag "https://secure.gravatar.com/avatar/73719c8eb97a63acd87f2f0a918a5005?s=100", id: "root-img", class: 'hidden-xs'
+            = link_to "Hank Stoever", root_path, id: 'root-path'
+          %li.col-md-2.col-md-offset-2.text-center.dropdown
+            %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              Contact
+              %span.caret
+            %ul.dropdown-menu{:role => "menu"}
+              %li
+                = link_to icon("envelope") + "Email", "mailto:hstove@gmail.com"
+              %li
+                = link_to icon("github") + "Github", "https://github.com/hstove", target: '_blank'
+              %li
+                = link_to icon("linkedin") + "LinkedIn", "http://www.linkedin.com/in/hankstoever", target: '_blank'
+              %li
+                = link_to icon("twitter") + "Twitter", "https://twitter.com/heynky", target: '_blank'
+                - google_url = "https://plus.google.com/114545204071567890438?rel=author"
+              %li
+                = link_to icon("google-plus") + "Google+", google_url, target: '_blank'
+              %li
+                = link_to icon("rss") + "RSS", posts_url(format: :rss), target: '_blank'
+              %li
+                = link_to "https://rubygems.org/profiles/heynk" do
+                  = image_tag "/images/ruby.png", height: 11, target: "_blank"
+                  RubyGems
+    .row
+      .col-md-12.text-center
+        %span
           = succeed(link_to ".", "https://vimeo.com/40434608", target: '_blank', style: "text-decoration: none;", class: "gnar") do
-            part time nerd, part time gnar shredder
-        %p.description
-          software engineer at
-          = link_to "up global", "http://up.co"
-        %br
-        %p.description
-          Seattle, Earth -
-          = link_to icon("envelope"), "mailto:hstove@gmail.com"
-          = link_to icon("github"), "https://github.com/hstove", target: '_blank'
-          = link_to icon("linkedin"), "http://www.linkedin.com/in/hankstoever", target: '_blank'
-          = link_to icon("twitter"), "https://twitter.com/heynky", target: '_blank'
-          - google_url = "https://plus.google.com/114545204071567890438?rel=author"
-          = link_to icon("google-plus"), google_url, target: '_blank'
-          = link_to icon("rss"), posts_url(format: :rss), target: '_blank'
-          = link_to "https://rubygems.org/profiles/heynk" do
-            = image_tag "/images/ruby.png", height: 11, target: "_blank"
-        %br
-        = link :projects
-        %p.link= link_to "Blog", posts_path
-        =# render partial: "customers/form"
-        %br
-        %br
-        %p
-          = link_to "/book", class: "book-link" do
-            Are you a self-taught programmer?
-            %br
-            %br
-            I'm writing a guide for you.
-    #main
-      /= hn_ad
-      /= bitcoin_ad
-      /= render "layouts/bitcoin_rails_ad"
-      - if notice
-        %p.notice= notice
+            part time nerd, part time gnar
+    %br
+    /= hn_ad
+    /= bitcoin_ad
+    /= render "layouts/bitcoin_rails_ad"
+    - if notice
+      %p.notice= notice
+    .container
       = yield

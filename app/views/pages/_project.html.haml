@@ -1,8 +1,18 @@
-.col-md-6.project-thumbnail
+.col-md-3.project-thumbnail
   .thumbnail
-    = image_tag "projects/#{image}"
+    - if project.image
+      = image_tag "projects/#{project.image}"
     .caption
-      - repo = Octokit::Repository.from_url(url)
-      %h4= link_to name, url, target: '_blank'
-      - unless description.nil?
-        = content_tag(:span, description.html_safe)
+      - if project.languages
+        - project.languages.each do |lang|
+          = language_label lang
+      - repo = Octokit::Repository.from_url(project.url)
+      %h4= link_to project.name, project.url, target: '_blank'
+      - unless project.description.nil?
+        = content_tag(:span, project.description.html_safe)
+      - if project.github
+        %br
+        %br
+        .label.label-default
+          = icon :star
+          = Rails.cache.read(['stargazers', project.github])

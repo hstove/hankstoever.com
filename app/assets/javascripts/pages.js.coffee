@@ -3,4 +3,8 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $ ->
-  $('.project-thumbnail .thumbnail').matchHeight()
+  $('.btn-group.project-tabs .btn').on 'click', ->
+    $this = $(this)
+    $this.parent().find('.active').removeClass 'active'
+    $this.addClass 'active'
+    true

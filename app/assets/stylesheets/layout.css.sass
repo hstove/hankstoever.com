@@ -1,4 +1,5 @@
 @import "variables"
+@import "bootstrap/variables"
 
 html
   :height 100%
@@ -34,46 +35,33 @@ a, a:visited
       :text-decoration underline
 
 
-#sidebar
-  :z-index 10
-  :float left
-  :width 300px
-  :text-align right
-  p
-    :margin 5px 0
-  .avatar
-    :width 300px
-  .desc
-    :padding 10px
-    h1
-      :margin 5px
-  .book-link
-    text-decoration: none
-    display: block
-    text-align: center
-    background-color: #2741a9
-    color: darken(white, 2.5)
-    font-weight: 800
-    padding: 15px
-    border-radius: 4px
-    opacity: 0.9
+.navbar-nav .dropdown a i
+  margin-right: 10px
 
 .description
   :color #aaa
   :font-weight 300
   :font-size 13px
 
+$img-height: 60px
+#root-img
+  position: absolute
+  width: $img-height
+  height: $img-height
+  border-radius: 50%
+  opacity: 0.7
+  left: 50%
+  top: 10px
+  margin-left: -($img-height / 2)
 
-#main
-  :padding 0 25px
-  :margin-top 20px
-  :float left
-  :min-height 100%
-  :border-left 1px solid rgba(126, 89, 180, 0.5)
-  :max-width 600px
-  :width 100%
-  img
-    :max-width 100%
+#root-path
+  color: darken(white, 75)
+  font-weight: bold
+  font-size: 20px
+  position: relative
+  top: 30px
+  @media (max-width: $screen-xs-max)
+    top: 0
 
 .project
   :margin-left 20px

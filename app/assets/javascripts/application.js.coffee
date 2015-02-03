@@ -13,6 +13,7 @@
 #= require jquery
 #= require jquery_ujs
 #= require turbolinks
+#= require bootstrap-sprockets
 #= require dynamo
 #= require_tree .
 
@@ -23,3 +24,5 @@ $(document).ready ->
     else
       $('.gnar').css('visibility','hidden')
   , 10000
+
+  $('.project-thumbnail .thumbnail').matchHeight()
