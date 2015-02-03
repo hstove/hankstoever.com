@@ -1,7 +1,7 @@
-.col-md-3.project-thumbnail
+.col-md-3.col-xs-12.project-thumbnail
   .thumbnail
     - if project.image
-      = image_tag "projects/#{project.image}"
+      = image_tag "projects/#{project.image}", class: 'hidden-xs'
     .caption
       - if project.languages
         - project.languages.each do |lang|

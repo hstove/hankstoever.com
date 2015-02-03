@@ -19,7 +19,7 @@ projects:
       name: copypastecsv
       url: http://copypastecsv.herokuapp.com
       image: copypastecsv.png
-      description: A pastebin-like site for CSV's.
+      description: A pastebin-like site for CSV's. Paste in CSV, get a shareable file.
     -
       name: "gender.hankstoever.com"
       url: "http://github.com/hstove/gender"
