@@ -32,6 +32,7 @@ gem 'gibbon', github: "amro/gibbon"
 gem "rails_best_practices"
 gem 'rails_12factor'
 gem 'autoprefixer-rails'
+gem "rails_config"
 # gem 'github-markup', require: 'github/markup'
 
 group :doc do

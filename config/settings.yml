@@ -1,0 +1,53 @@
+---
+projects:
+  websites:
+    with_images:
+      -
+        description: >
+          A website for analyzing how long it takes for Github issues and
+          pull requests to close. <br> <strong>Winner of the
+          <a href='https://github.com/blog/1892-third-annual-data-challenge-winners'>
+          2014 Github Data Challenge</a></strong>
+        image: issuestats.png
+        name: issuestats.com
+        url: "http://issuestats.com"
+      -
+        name: "uludum.org"
+        url: "https://www.uludum.org"
+        description: An open platform for education.
+        image: uludum.png
+      -
+        name: copypastecsv
+        url: http://copypastecsv.herokuapp.com
+        image: copypastecsv.png
+        description: A pastebin-like site for CSV's.
+      -
+        name: "gender.hankstoever.com"
+        url: "http://github.com/hstove/gender"
+        description: >
+          A web interface for testing my <a href='https://github.com/hstove/gender'>gender classifier</a>.
+        image: gender.png
+    without_images:
+      -
+        name: "404kids.org"
+        url: "http://404kids.org"
+        description: >
+          An easy way to add a missing child ad to your 404 page.
+      -
+        name: "hnbuffer.com"
+        url: "http://hnbuffer.com"
+        description: >
+          Automatically post to <a href="http://news.ycombinator.com">
+          Hacker News</a> at the right time.
+      -
+        name: "seattleubooks.com"
+        url: "http://www.seattleubooks.com/"
+        description: >
+          A website for Seattle University students to find their
+          textbooks by class and buy them on Amazon.
+      -
+        name: "hankstoever.com"
+        url: "http://hankstoever.com"
+        description: >
+          My personal website. Available
+          <a href="https://github.com/hstove/hankstoever.com">on Github</a>.

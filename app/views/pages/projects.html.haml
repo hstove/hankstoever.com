@@ -1,19 +1,18 @@
 = cache "projects_page" do
-  %blockquote
-    %p Hank is a serious Ruby expert with a surprisingly broad knowledge of JavaScript as well.
-    %small
-      = "-"
-      = link_to "Open Source Report Card", "http://osrc.dfm.io/hstove"
+  -# %blockquote
+  -#   %p Hank is a serious Ruby expert with a surprisingly broad knowledge of JavaScript as well.
+  -#   %small
+  -#     = "-"
+  -#     = link_to "Open Source Report Card", "http://osrc.dfm.io/hstove"
 
   %h4 Websites
-  = project "issuestats.com", "http://issuestats.com", "A website for analyzing how long it takes for Github issues and pull requests to close. <strong>Winner of the #{link_to "2014 Github Data Challenge", 'https://github.com/blog/1892-third-annual-data-challenge-winners'}</strong>"
-  = project "uludum.org", "http://uludum.org", "An open platform for education."
-  = project "404kids.org", "http://404kids.org", "An easy way to add a missing child ad to your 404 page."
-  = project "hnbuffer.com", "http://hnbuffer.com", "Automatically post to #{link_to "Hacker News", "http://news.ycombinator.com"} at the right time."
-  = project "seattleubooks.com", "http://www.seattleubooks.com/", "A website for Seattle University students to find their textbooks by class and buy them on Amazon."
-  = project "hankstoever.com", "http://hankstoever.com", "My personal website. Available #{link_to "on Github", "https://github.com/hstove/hankstoever.com"}."
-  = project "gender.hankstoever.com", "http://github.com/hstove/gender", "A web interface for testing my #{link_to 'gender classifier', 'https://github.com/hstove/gender', target: '_blank'}"
-  /= project "RhinosaurusBand.com", "http://rhinosaurusband.com", "A friend's band."
+  - Settings.projects.websites.with_images.in_groups_of(2, false) do |projects|
+    .row
+      - projects.each do |project|
+        = project_thumb project.name, project.url, project.image, project.description
+  .row
+    - Settings.projects.websites.without_images.each do |project|
+      = project project.name, project.url, project.description
 
   %h4 Github Projects
   = project "issue_stats",

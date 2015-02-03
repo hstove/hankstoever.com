@@ -17,6 +17,11 @@ module ApplicationHelper
     end
   end
 
+  def project_thumb name, url, image, description=nil
+    locals = { name: name, url: url, description: description, image: image }
+    render partial: 'pages/project', locals: locals
+  end
+
   def markdown(text)
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
     markdown.render(text).html_safe

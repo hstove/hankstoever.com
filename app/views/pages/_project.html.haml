@@ -1,0 +1,8 @@
+.col-md-6.project-thumbnail
+  .thumbnail
+    = image_tag "projects/#{image}"
+    .caption
+      - repo = Octokit::Repository.from_url(url)
+      %h4= link_to name, url, target: '_blank'
+      - unless description.nil?
+        = content_tag(:span, description.html_safe)
