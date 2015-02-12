@@ -6,8 +6,7 @@ task fetch_stargazers: :environment do
           login: 'hstove',
           password: ENV['GITHUB_PASSWORD']
           })
-        stars = client.stargazers(project.github).size
-        Rails.cache.write(['stargazers', project.github], stars)
+        Rails.cache.write("stargazers - #{project.github}", stars)
         ap "#{project.github} - #{stars}"
       end
     end

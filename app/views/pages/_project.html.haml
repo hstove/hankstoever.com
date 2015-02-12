@@ -15,4 +15,4 @@
         %br
         .label.label-default
           = icon :star
-          = Rails.cache.read(['stargazers', project.github])
+          = Rails.cache.read("stargazers - #{project.github}")
