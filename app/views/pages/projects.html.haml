@@ -1,50 +1,49 @@
-= cache "projects_page" do
-  .row
-    .col-md-12.text-center
-      %h1 Projects
+.row
+  .col-md-12.text-center
+    %h1 Projects
 
-  %div{:role => "tabpanel"}
-  / Nav tabs
-  .row
-    .col-md-12.text-center
-      .btn-group.project-tabs
-        %a.btn.btn-default.active{"aria-controls" => "home", "data-toggle" => "tab", :href => "#personal", :role => "tab"} Personal
-        %a.btn.btn-default{"aria-controls" => "profile", "data-toggle" => "tab", :href => "#professional", :role => "tab"} Professional
-      -# .nav.nav-pills.text-center.btn-group{:role => "tablist"}
-      -#   -# %li.active{:role => "presentation"}
-      -#   %a.btn.btn-default.active{"aria-controls" => "home", "data-toggle" => "tab", :href => "#personal", :role => "tab"} Personal
-      -#   -# %li{:role => "presentation"}
-      -#   %a.btn.btn-default{"aria-controls" => "profile", "data-toggle" => "tab", :href => "#professional", :role => "tab"} Professional
-  / Tab panes
-  .tab-content
-    #personal.tab-pane.active{:role => "tabpanel"}
-      %h4 Websites
-      .row
-        - Settings.projects.websites.each do |project|
-          = project_thumb project
+%div{:role => "tabpanel"}
+/ Nav tabs
+.row
+  .col-md-12.text-center
+    .btn-group.project-tabs
+      %a.btn.btn-default.active{"aria-controls" => "home", "data-toggle" => "tab", :href => "#personal", :role => "tab"} Personal
+      %a.btn.btn-default{"aria-controls" => "profile", "data-toggle" => "tab", :href => "#professional", :role => "tab"} Professional
+    -# .nav.nav-pills.text-center.btn-group{:role => "tablist"}
+    -#   -# %li.active{:role => "presentation"}
+    -#   %a.btn.btn-default.active{"aria-controls" => "home", "data-toggle" => "tab", :href => "#personal", :role => "tab"} Personal
+    -#   -# %li{:role => "presentation"}
+    -#   %a.btn.btn-default{"aria-controls" => "profile", "data-toggle" => "tab", :href => "#professional", :role => "tab"} Professional
+/ Tab panes
+.tab-content
+  #personal.tab-pane.active{:role => "tabpanel"}
+    %h4 Websites
+    .row
+      - Settings.projects.websites.each do |project|
+        = project_thumb project
 
-      %h4 Github Projects
-      .row
-        - Settings.projects.github.each do |project|
-          = project_thumb project
+    %h4 Github Projects
+    .row
+      - Settings.projects.github.each do |project|
+        = project_thumb project
 
-      %h4 Open Source Contributions
-      .row
-        - Settings.projects.open_source.each do |project|
-          = project_thumb project
+    %h4 Open Source Contributions
+    .row
+      - Settings.projects.open_source.each do |project|
+        = project_thumb project
 
-    #professional.tab-pane{:role => "tabpanel"}
-      %h4
-        = link_to "UP Global", "https://www.up.co"
-        %span.label Software Engineer 2013-current
-      .row
-        - Settings.projects.up.each do |project|
-          = project_thumb project
+  #professional.tab-pane{:role => "tabpanel"}
+    %h4
+      = link_to "UP Global", "https://www.up.co"
+      %span.label Software Engineer 2013-current
+    .row
+      - Settings.projects.up.each do |project|
+        = project_thumb project
 
-      %h4
-        = link_to "Dailycred", "https://www.dailycred.com"
-        Integration Libraries
-        %span.label Lead Platform Engineer 2011-2013
-      .row
-        - Settings.projects.dailycred.each do |project|
-          = project_thumb project
+    %h4
+      = link_to "Dailycred", "https://www.dailycred.com"
+      Integration Libraries
+      %span.label Lead Platform Engineer 2011-2013
+    .row
+      - Settings.projects.dailycred.each do |project|
+        = project_thumb project
