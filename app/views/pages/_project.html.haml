@@ -15,6 +15,6 @@
       - if project.github
         %br
         %br
-        .label.label-default{"data-toggle" => "tooltip", "data-placement" => "bottom", "title" => "Github Stars"}
+        .label.label-info{"data-toggle" => "tooltip", "data-placement" => "bottom", "title" => "Github Stars"}
           = icon :star
-          = Rails.cache.read("stargazers - #{project.github}")
+          = Rails.cache.read("stargazers-#{project.github}")

@@ -8,7 +8,7 @@ task fetch_stargazers: :environment do
             password: ENV['GITHUB_PASSWORD']
             })
           stars = client.stargazers(project.github).size
-          Rails.cache.write("stargazers - #{project.github}", stars)
+          Rails.cache.write("stargazers-#{project.github}", stars)
           Rails.logger.info "#{project.github} - #{stars}"
         rescue Exception => e
           Rails.logger.error "Error when fetching stargazers - #{e}"
