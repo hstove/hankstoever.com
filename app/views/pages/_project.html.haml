@@ -3,16 +3,18 @@
     - if project.image
       = image_tag "projects/#{project.image}", class: 'hidden-xs'
     .caption
-      - if project.languages
-        - project.languages.each do |lang|
-          = language_label lang
       - repo = Octokit::Repository.from_url(project.url)
       %h4= link_to project.name, project.url, target: '_blank'
       - unless project.description.nil?
         = content_tag(:span, project.description.html_safe)
+      - if project.languages
+        %br
+        %br
+        - project.languages.each do |lang|
+          = language_label lang
       - if project.github
         %br
         %br
-        .label.label-default
+        .label.label-default{"data-toggle" => "tooltip", "data-placement" => "bottom", "title" => "Github Stars"}
           = icon :star
           = Rails.cache.read("stargazers - #{project.github}")

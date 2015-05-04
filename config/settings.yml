@@ -16,10 +16,10 @@ projects:
       description: An open platform for education.
       image: uludum.png
     -
-      name: copypastecsv
-      url: http://copypastecsv.herokuapp.com
-      image: copypastecsv.png
-      description: A pastebin-like site for CSV's. Paste in CSV, get a shareable file.
+      name: Geospeed
+      url: http://geospeed.co
+      image: geospeed.png
+      description: An app for getting the current speed limit.
     -
       name: "gender.hankstoever.com"
       url: "http://github.com/hstove/gender"
@@ -27,10 +27,21 @@ projects:
         A web interface for testing my <a href='https://github.com/hstove/gender'>gender classifier</a>.
       image: gender.png
     -
+      name: copypastecsv
+      url: http://copypastecsv.herokuapp.com
+      image: copypastecsv.png
+      description: A pastebin-like site for CSV's. Paste in CSV, get a shareable file.
+    -
+      name: Shreddy Maps
+      url: http://shreddymaps.com
+      description: Find, save, and share skate spots around the world.
+      image: shreddymaps.png
+    -
       name: "404kids.org"
       url: "http://404kids.org"
       description: >
         An easy way to add a missing child ad to your 404 page.
+      image: 404kids.png
     -
       name: "hnbuffer.com"
       url: "http://hnbuffer.com"
@@ -76,6 +87,13 @@ projects:
       github: hstove/gender
       :description: A classifier for determining gender based off of first names. Written
         in Go.
+      languages:
+        - go
+    - :name: geospeed
+      :url: https://github.com/hstove/geospeed
+      github: hstove/geospeed
+      :description: An app for getting the current speed limit. A rails app
+        with a React-powered front end.
       languages:
         - go
     - :name: hankstoever.com

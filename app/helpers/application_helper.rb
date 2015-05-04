@@ -46,6 +46,7 @@ module ApplicationHelper
       "go" => 'success',
       "javascript" => 'warning'
     }
-    content_tag :small, lang.titleize, class: "text-#{classes[lang] || 'default'}"
+    clazz = "text-#{classes[lang] || 'default'} project-lang"
+    content_tag :small, lang.titleize, class: clazz
   end
 end

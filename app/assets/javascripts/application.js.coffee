@@ -14,6 +14,7 @@
 #= require jquery_ujs
 #= require turbolinks
 #= require bootstrap-sprockets
+#= require bootstrap
 #= require dynamo
 #= require_tree .
 
@@ -26,3 +27,4 @@ $(document).ready ->
   , 10000
 
   $('.project-thumbnail .thumbnail').matchHeight()
+  $('[data-toggle="tooltip"]').tooltip()
