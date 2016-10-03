@@ -16,12 +16,6 @@ class Customer < ActiveRecord::Base
     self.subscribed
   end
 
-  def self.email_blast! name
-    subscribers.each do |c|
-      mailer(CustomerMailer, name, c.email)
-    end
-  end
-
   def subscribe_to_mailchimp
     list_id = ENV['MAILCHIMP_LIST_ID']
     merge_vars = {

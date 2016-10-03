@@ -21,14 +21,14 @@
         .navbar-nav.nav.col-md-12
           - clazz = 'col-md-2 text-center'
           %li{ class: PostsController === controller ? "#{clazz} active" : clazz }
-            = link_to "Blog", posts_path
+            = link_to "Blog", posts_path, class: 'plain'
           %li{ class: params[:template] == 'projects' ? "#{clazz} active" : clazz }
-            = link_to "Projects", page_path(template: :projects)
+            = link_to "Projects", page_path(template: :projects), class: 'plain'
           %li.col-md-4.col-md-offset-0.text-center
             = image_tag "https://secure.gravatar.com/avatar/73719c8eb97a63acd87f2f0a918a5005?s=100", id: "root-img", class: 'hidden-xs'
-            = link_to "Hank Stoever", root_path, id: 'root-path'
+            = link_to "Hank Stoever", root_path, id: 'root-path', class: 'plain'
           %li.col-md-2.col-md-offset-2.text-center.dropdown
-            %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            %a.dropdown-toggle.plain{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
               Contact
               %span.caret
             %ul.dropdown-menu{:role => "menu"}

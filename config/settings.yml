@@ -17,7 +17,7 @@ projects:
       image: uludum.png
     -
       name: Geospeed
-      url: http://geospeed.co
+      url: http://geospeed.herokuapp.com
       image: geospeed.png
       description: An app for getting the current speed limit.
     -
@@ -26,6 +26,14 @@ projects:
       description: >
         A web interface for testing my <a href='https://github.com/hstove/gender'>gender classifier</a>.
       image: gender.png
+    -
+      name: "Easy Strava Segments"
+      url: "http://segments.hankstoever.com"
+      description: >
+        An app for finding easy
+        <a href="https://strava.com">Strava</a>
+        segments near you.
+      image: segments.png
     -
       name: copypastecsv
       url: http://copypastecsv.herokuapp.com
@@ -95,7 +103,9 @@ projects:
       :description: An app for getting the current speed limit. A rails app
         with a React-powered front end.
       languages:
-        - go
+        - ruby
+        - react
+        - javascript
     - :name: hankstoever.com
       :url: https://github.com/hstove/hankstoever.com
       github: hstove/hankstoever.com
