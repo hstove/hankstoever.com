@@ -34,8 +34,15 @@
 
   #professional.tab-pane{:role => "tabpanel"}
     %h4
+      = link_to "Kadenze", "https://www.kadenze.com"
+      %span.label Software Engineer 2015-current
+    .row
+      - Settings.projects.kadenze.each do |project|
+        = project_thumb project
+
+    %h4
       = link_to "UP Global", "https://www.up.co"
-      %span.label Software Engineer 2013-current
+      %span.label Software Engineer 2013-2015
     .row
       - Settings.projects.up.each do |project|
         = project_thumb project

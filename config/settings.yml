@@ -210,3 +210,9 @@ projects:
       url: https://swoop.up.co
       description: Our internal event management app. Custom built with Node.js and Backbone.
       image: swoop.png
+  kadenze:
+    -
+      name: Kadenze
+      url: https://www.kadenze.com
+      description: An online MOOC platform that provides world-class education in the fields of art and creative technology.
+      image: kadenze.jpg
