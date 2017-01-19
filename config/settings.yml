@@ -27,6 +27,12 @@ projects:
         A web interface for testing my <a href='https://github.com/hstove/gender'>gender classifier</a>.
       image: gender.png
     -
+      name: "Lip Blind Tru"
+      url: "http://lipblindtru.com"
+      description: >
+        An iOS app for browsing <a href="https://newschoolers.com" target="_blank">Newschoolers</a>.
+      image: lip_blind_tru.png
+    -
       name: "Easy Strava Segments"
       url: "http://segments.hankstoever.com"
       description: >
