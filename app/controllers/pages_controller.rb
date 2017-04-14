@@ -15,4 +15,7 @@ class PagesController < ApplicationController
 
     redirect_to "https://www.uludum.org/courses/118"
   end
+
+  def arxiv_sanity_bookmarklet
+  end
 end

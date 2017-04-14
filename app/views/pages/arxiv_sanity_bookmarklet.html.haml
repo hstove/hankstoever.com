@@ -1,0 +1,12 @@
+.text-center
+  %p
+    %a.btn.btn-lg.btn-primary{href: 'javascript:window.open("http://arxiv-sanity.com/"+document.location.pathname.split("/").pop().split(".pdf")[0], "blank")'} Open in Arxiv-Sanity
+
+  %p
+    Drag that button to your bookmarks bar.
+    %br
+    When you're viewing a paper or abstract on arxiv.org,
+    %br
+    click that bookmarklet to open it on
+    = succeed "." do
+      = link_to "arxiv-sanity.com", "http://arxiv-sanity.com", target: :_blank

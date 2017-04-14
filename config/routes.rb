@@ -7,6 +7,7 @@ Heynk::Application.routes.draw do
 
   get "/btc" => "pages#bitcoin", as: :btc
   # this should be last
+  get "/arxiv-sanity-bookmarklet" => "pages#arxiv_sanity_bookmarklet"
   get "/:template" => "pages#show", as: "page"
 
   # The priority is based upon order of creation: first created -> highest priority.
