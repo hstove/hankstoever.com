@@ -2,6 +2,9 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
+require "action_view"
+require "action_view/template/resolver"
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
@@ -28,6 +31,6 @@ module Heynk
 
     config.redis = redis
     Split.redis = redis
-    Split.redis.namespace = "hankstoever.com"
+    Split.redis#.namespace = "hankstoever.com"
   end
 end

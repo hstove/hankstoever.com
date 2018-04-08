@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   include QueueHelpers
   helper_method :is_admin?
 
-  include Mobylette::RespondToMobileRequests
+  # include Mobylette::RespondToMobileRequests
 
   private
 

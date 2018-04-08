@@ -9,7 +9,7 @@ class Customer < ActiveRecord::Base
     # mailer(CustomerMailer, :new_customer, self.email)
     # mailer(CustomerMailer, :bitcoin_class, self.email)
     # mailer(CustomerMailer, :digest, self.email) if self.subscribed
-    subscribe_to_mailchimp
+    # subscribe_to_mailchimp
   end
 
   def subscribed?

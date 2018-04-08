@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.0'
+gem 'rails', '~> 4.2'
 
-gem 'pg'
+gem 'pg', '~> 0.21.0'
 gem 'awesome_print'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
@@ -32,9 +32,10 @@ gem 'gibbon', github: "amro/gibbon"
 gem "rails_best_practices"
 gem 'rails_12factor'
 gem 'autoprefixer-rails'
-gem "rails_config"
+gem 'config'
 # gem 'github-markup', require: 'github/markup'
 gem 'bootswatch-rails'
+gem 'redis-namespace'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -68,7 +69,7 @@ group :test, :development do
   gem 'better_errors'
   # gem 'meta_request'
   gem 'quiet_assets'
-  # gem 'binding_of_caller', '0.7.1'
+  gem 'binding_of_caller'
   gem 'dotenv-rails'
 end
 

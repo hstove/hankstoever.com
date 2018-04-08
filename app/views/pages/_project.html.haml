@@ -3,7 +3,6 @@
     - if project.image
       = image_tag "projects/#{project.image}", class: 'hidden-xs'
     .caption
-      - repo = Octokit::Repository.from_url(project.url)
       %h4= link_to project.name, project.url, target: '_blank'
       - unless project.description.nil?
         = content_tag(:span, project.description.html_safe)
