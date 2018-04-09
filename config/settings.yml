@@ -3,6 +3,13 @@ projects:
   websites:
     -
       description: >
+        An open source distributed social network, built on Ethereum and IPFS.
+        Federation is built in, so you can interact with users on other social networks, like Mastodon.
+      image: numa.png
+      name: Numa
+      url: "https://numaverse.com"
+    -
+      description: >
         Analyze how long it takes for Github issues and
         pull requests to close. <br><br><strong>Winner of the
         <a href='https://github.com/blog/1892-third-annual-data-challenge-winners'>
@@ -75,6 +82,15 @@ projects:
         My personal website. Available
         <a href="https://github.com/hstove/hankstoever.com">on Github</a>.
   github:
+    -
+      name: Numa
+      url: https://github.com/numaverse/numaverse-gateway
+      github: numaverse/numaverse-gateway
+      description: A gateway server for interacting with Numa data on Ethereum and IPFS.
+      languages:
+        - ruby
+        - solidity
+        - javascript
     - :name: issue_stats
       :url: https://github.com/hstove/issue_stats
       github: hstove/issue_stats
@@ -222,3 +238,8 @@ projects:
       url: https://www.kadenze.com
       description: An online MOOC platform that provides world-class education in the fields of art and creative technology.
       image: kadenze.jpg
+    -
+      name: Kannu
+      url: https://kannu.com
+      description: An LMS platform, built for media-heavy courses. Perfect for art schools and more.
+      image: kannu.jpg
