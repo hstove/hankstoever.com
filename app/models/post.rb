@@ -87,4 +87,8 @@ class Post < ActiveRecord::Base
     word_count / 200
   end
 
+  def creation_date
+    posted_at || created_at
+  end
+
 end

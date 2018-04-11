@@ -49,7 +49,7 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'shoulda-matchers', :git => 'git://github.com/thoughtbot/shoulda-matchers.git'
   # gem 'test-unit'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'capybara'
   gem 'capybara-webkit'
   gem 'guard', '>= 2.14.0'

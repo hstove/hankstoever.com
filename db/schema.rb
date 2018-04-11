@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130724000644) do
+ActiveRecord::Schema.define(version: 20180411195645) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "afterparty_jobs", force: true do |t|
+  create_table "afterparty_jobs", force: :cascade do |t|
     t.text     "job_dump"
     t.string   "queue"
     t.datetime "execute_at"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20130724000644) do
     t.datetime "updated_at"
   end
 
-  create_table "customers", force: true do |t|
+  create_table "customers", force: :cascade do |t|
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20130724000644) do
     t.boolean  "handbook"
   end
 
-  create_table "posts", force: true do |t|
+  create_table "posts", force: :cascade do |t|
     t.datetime "posted_at"
     t.text     "body"
     t.boolean  "published"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20130724000644) do
     t.string   "title"
     t.integer  "points"
     t.integer  "views"
+    t.string   "external_url"
   end
 
 end
